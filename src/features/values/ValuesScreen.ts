@@ -3,6 +3,7 @@ import { valueCategories, values } from './values.data';
 import { createValuesState } from './values.state';
 import { filterValues } from './values.filters';
 import { createReviewScreen } from './ReviewScreen';
+import { createCompassScreen } from '../compass/CompassScreen';
 
 export function createValuesScreen(): HTMLElement {
   const state = createValuesState();
@@ -95,39 +96,38 @@ export function createValuesScreen(): HTMLElement {
   bar.setAttribute('aria-label', 'Your selection');
   bar.innerHTML = '<div class="selection-bar__inner"><div><p class="selection-count" role="status" aria-live="polite" aria-atomic="true"></p><p class="storage-note"></p></div><button type="button" class="primary-button">Review my values</button></div>';
   const reviewButton = bar.querySelector<HTMLButtonElement>('button')!;
-  const complete = document.createElement('section');
-  complete.hidden = true;
-  complete.innerHTML = '<div class="introduction"><p class="eyebrow">A MEANINGFUL BEGINNING</p><h1 tabindex="-1">Your values, your direction.</h1><p class="introduction__description">Your core values are ready to reflect on. These are a starting point, and you can change them as your life evolves.</p></div><div class="values-grid core-summary"></div><div class="review-actions"><button type="button" class="primary-button">Edit my values</button></div>';
-  const review = createReviewScreen(state, () => show('explore'), () => show('complete'));
+  const compass = createCompassScreen(() => show('explore'), () => {
+    state.reset();
+    search = '';
+    category = null;
+    input.value = '';
+    exploreScroll = 0;
+    applyFilters();
+    show('explore');
+  });
+  const review = createReviewScreen(state, () => show('explore'), () => {
+    if (state.confirmCoreValues()) show('compass');
+  });
 
-  function show(view: 'explore' | 'review' | 'complete'): void {
+  function show(view: 'explore' | 'review' | 'compass', focus = true): void {
     if (!explore.hidden) exploreScroll = window.scrollY;
     explore.hidden = view !== 'explore';
     review.element.hidden = view !== 'review';
-    complete.hidden = view !== 'complete';
+    compass.element.hidden = view !== 'compass';
     bar.hidden = view !== 'explore';
+    screen.classList.toggle('main-content--compass', view === 'compass');
     if (view === 'review') review.render();
-    if (view === 'complete') {
-      const summary = complete.querySelector('.core-summary')!;
-      summary.replaceChildren();
-      for (const value of values.filter((value) => state.getSelectedIds().has(value.id))) {
-        const card = document.createElement('article');
-        card.className = 'value-card';
-        const title = document.createElement('h2');
-        title.textContent = value.name;
-        const description = document.createElement('p');
-        description.className = 'value-card__description';
-        description.textContent = value.description;
-        card.append(title, description);
-        summary.append(card);
-      }
+    if (view === 'compass') {
+      const selectedIds = state.getSelectedIds();
+      compass.render(values.filter((value) => selectedIds.has(value.id)));
     }
-    const active = view === 'explore' ? explore : view === 'review' ? review.element : complete;
-    active.querySelector('h1')?.focus({ preventScroll: true });
-    window.scrollTo(0, view === 'explore' ? exploreScroll : 0);
+    const active = view === 'explore' ? explore : view === 'review' ? review.element : compass.element;
+    if (focus) {
+      active.querySelector('h1')?.focus({ preventScroll: true });
+      window.scrollTo(0, view === 'explore' ? exploreScroll : 0);
+    }
   }
   reviewButton.addEventListener('click', () => show('review'));
-  complete.querySelector('button')!.addEventListener('click', () => show('review'));
   state.subscribe((selectedIds) => {
     for (const [id, card] of cards) card.setSelected(selectedIds.has(id));
     bar.querySelector('.selection-count')!.textContent = `${selectedIds.size} ${selectedIds.size === 1 ? 'value' : 'values'} selected`;
@@ -141,6 +141,7 @@ export function createValuesScreen(): HTMLElement {
     if (entry && !bar.hidden) screen.style.setProperty('--selection-bar-height', `${bar.getBoundingClientRect().height}px`);
   });
   observer.observe(bar);
-  screen.append(explore, review.element, complete, bar);
+  screen.append(explore, review.element, compass.element, bar);
+  if (state.hasCoreValues()) show('compass', false);
   return screen;
 }
