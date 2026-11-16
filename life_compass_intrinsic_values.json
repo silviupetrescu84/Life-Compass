@@ -1,0 +1,727 @@
+{
+  "title": "Life Compass — Intrinsic Values Library",
+  "version": 1,
+  "definition": "Values someone may choose to express for their own sake, rather than merely to obtain an external reward. This is an illustrative library, not a complete or scientifically definitive taxonomy.",
+  "values": [
+    {
+      "id": "love",
+      "name": "Love",
+      "description": "Caring deeply for others and their wellbeing",
+      "category": "Love & Relationships"
+    },
+    {
+      "id": "connection",
+      "name": "Connection",
+      "description": "Building meaningful bonds with people",
+      "category": "Love & Relationships"
+    },
+    {
+      "id": "friendship",
+      "name": "Friendship",
+      "description": "Nurturing mutual friendship and trust",
+      "category": "Love & Relationships"
+    },
+    {
+      "id": "intimacy",
+      "name": "Intimacy",
+      "description": "Sharing closeness and vulnerability",
+      "category": "Love & Relationships"
+    },
+    {
+      "id": "affection",
+      "name": "Affection",
+      "description": "Expressing warmth and fondness",
+      "category": "Love & Relationships"
+    },
+    {
+      "id": "belonging",
+      "name": "Belonging",
+      "description": "Being part of a community or group",
+      "category": "Love & Relationships"
+    },
+    {
+      "id": "loyalty",
+      "name": "Loyalty",
+      "description": "Standing by people and commitments",
+      "category": "Love & Relationships"
+    },
+    {
+      "id": "trust",
+      "name": "Trust",
+      "description": "Giving and earning confidence in others",
+      "category": "Love & Relationships"
+    },
+    {
+      "id": "mutuality",
+      "name": "Mutuality",
+      "description": "Giving and receiving care in relationships",
+      "category": "Love & Relationships"
+    },
+    {
+      "id": "presence",
+      "name": "Presence",
+      "description": "Being fully there with another person",
+      "category": "Love & Relationships"
+    },
+    {
+      "id": "kindness",
+      "name": "Kindness",
+      "description": "Treating people gently and thoughtfully",
+      "category": "Kindness & Care"
+    },
+    {
+      "id": "compassion",
+      "name": "Compassion",
+      "description": "Responding to suffering with care",
+      "category": "Kindness & Care"
+    },
+    {
+      "id": "empathy",
+      "name": "Empathy",
+      "description": "Seeking to understand others' feelings",
+      "category": "Kindness & Care"
+    },
+    {
+      "id": "generosity",
+      "name": "Generosity",
+      "description": "Giving freely of time, care, or resources",
+      "category": "Kindness & Care"
+    },
+    {
+      "id": "service",
+      "name": "Service",
+      "description": "Helping others through useful action",
+      "category": "Kindness & Care"
+    },
+    {
+      "id": "contribution",
+      "name": "Contribution",
+      "description": "Making a positive difference",
+      "category": "Kindness & Care"
+    },
+    {
+      "id": "hospitality",
+      "name": "Hospitality",
+      "description": "Making others feel welcome and comfortable",
+      "category": "Kindness & Care"
+    },
+    {
+      "id": "forgiveness",
+      "name": "Forgiveness",
+      "description": "Letting go of resentment when possible",
+      "category": "Kindness & Care"
+    },
+    {
+      "id": "patience",
+      "name": "Patience",
+      "description": "Allowing others and situations time",
+      "category": "Kindness & Care"
+    },
+    {
+      "id": "gentleness",
+      "name": "Gentleness",
+      "description": "Acting with softness rather than harshness",
+      "category": "Kindness & Care"
+    },
+    {
+      "id": "honesty",
+      "name": "Honesty",
+      "description": "Speaking and acting truthfully",
+      "category": "Integrity & Character"
+    },
+    {
+      "id": "integrity",
+      "name": "Integrity",
+      "description": "Acting consistently with your principles",
+      "category": "Integrity & Character"
+    },
+    {
+      "id": "authenticity",
+      "name": "Authenticity",
+      "description": "Expressing who you genuinely are",
+      "category": "Integrity & Character"
+    },
+    {
+      "id": "sincerity",
+      "name": "Sincerity",
+      "description": "Being genuine in words and intentions",
+      "category": "Integrity & Character"
+    },
+    {
+      "id": "accountability",
+      "name": "Accountability",
+      "description": "Owning your actions and their effects",
+      "category": "Integrity & Character"
+    },
+    {
+      "id": "responsibility",
+      "name": "Responsibility",
+      "description": "Taking care of what is yours to do",
+      "category": "Integrity & Character"
+    },
+    {
+      "id": "reliability",
+      "name": "Reliability",
+      "description": "Doing what you say you will do",
+      "category": "Integrity & Character"
+    },
+    {
+      "id": "humility",
+      "name": "Humility",
+      "description": "Recognizing your limits without self-dismissal",
+      "category": "Integrity & Character"
+    },
+    {
+      "id": "courage",
+      "name": "Courage",
+      "description": "Acting on what matters despite fear",
+      "category": "Integrity & Character"
+    },
+    {
+      "id": "self-respect",
+      "name": "Self-respect",
+      "description": "Treating yourself with dignity",
+      "category": "Integrity & Character"
+    },
+    {
+      "id": "fairness",
+      "name": "Fairness",
+      "description": "Treating people according to just standards",
+      "category": "Fairness & Community"
+    },
+    {
+      "id": "justice",
+      "name": "Justice",
+      "description": "Standing against harm and unfairness",
+      "category": "Fairness & Community"
+    },
+    {
+      "id": "equality",
+      "name": "Equality",
+      "description": "Recognizing equal human worth",
+      "category": "Fairness & Community"
+    },
+    {
+      "id": "equity",
+      "name": "Equity",
+      "description": "Responding to different needs fairly",
+      "category": "Fairness & Community"
+    },
+    {
+      "id": "respect",
+      "name": "Respect",
+      "description": "Honoring others' dignity and boundaries",
+      "category": "Fairness & Community"
+    },
+    {
+      "id": "inclusion",
+      "name": "Inclusion",
+      "description": "Making room for different people",
+      "category": "Fairness & Community"
+    },
+    {
+      "id": "solidarity",
+      "name": "Solidarity",
+      "description": "Standing together through difficulty",
+      "category": "Fairness & Community"
+    },
+    {
+      "id": "cooperation",
+      "name": "Cooperation",
+      "description": "Working together toward shared aims",
+      "category": "Fairness & Community"
+    },
+    {
+      "id": "civility",
+      "name": "Civility",
+      "description": "Disagreeing without cruelty",
+      "category": "Fairness & Community"
+    },
+    {
+      "id": "community",
+      "name": "Community",
+      "description": "Nurturing shared life and mutual support",
+      "category": "Fairness & Community"
+    },
+    {
+      "id": "freedom",
+      "name": "Freedom",
+      "description": "Choosing how to live within real constraints",
+      "category": "Freedom & Agency"
+    },
+    {
+      "id": "autonomy",
+      "name": "Autonomy",
+      "description": "Making choices guided by your own judgment",
+      "category": "Freedom & Agency"
+    },
+    {
+      "id": "independence",
+      "name": "Independence",
+      "description": "Being able to act on your own initiative",
+      "category": "Freedom & Agency"
+    },
+    {
+      "id": "self-direction",
+      "name": "Self-direction",
+      "description": "Setting your own meaningful direction",
+      "category": "Freedom & Agency"
+    },
+    {
+      "id": "agency",
+      "name": "Agency",
+      "description": "Taking an active role in shaping your life",
+      "category": "Freedom & Agency"
+    },
+    {
+      "id": "spontaneity",
+      "name": "Spontaneity",
+      "description": "Welcoming unplanned moments",
+      "category": "Freedom & Agency"
+    },
+    {
+      "id": "adventure",
+      "name": "Adventure",
+      "description": "Embracing worthwhile new experiences",
+      "category": "Freedom & Agency"
+    },
+    {
+      "id": "exploration",
+      "name": "Exploration",
+      "description": "Venturing beyond what is familiar",
+      "category": "Freedom & Agency"
+    },
+    {
+      "id": "nonconformity",
+      "name": "Nonconformity",
+      "description": "Thinking beyond social expectations",
+      "category": "Freedom & Agency"
+    },
+    {
+      "id": "self-expression",
+      "name": "Self-expression",
+      "description": "Sharing your individuality openly",
+      "category": "Freedom & Agency"
+    },
+    {
+      "id": "curiosity",
+      "name": "Curiosity",
+      "description": "Wanting to explore and understand",
+      "category": "Learning & Growth"
+    },
+    {
+      "id": "learning",
+      "name": "Learning",
+      "description": "Seeking new knowledge and skills",
+      "category": "Learning & Growth"
+    },
+    {
+      "id": "wisdom",
+      "name": "Wisdom",
+      "description": "Using understanding with sound judgment",
+      "category": "Learning & Growth"
+    },
+    {
+      "id": "understanding",
+      "name": "Understanding",
+      "description": "Seeking deeper clarity about things",
+      "category": "Learning & Growth"
+    },
+    {
+      "id": "open-mindedness",
+      "name": "Open-mindedness",
+      "description": "Considering views beyond your own",
+      "category": "Learning & Growth"
+    },
+    {
+      "id": "growth",
+      "name": "Growth",
+      "description": "Continuing to develop as a person",
+      "category": "Learning & Growth"
+    },
+    {
+      "id": "mastery",
+      "name": "Mastery",
+      "description": "Deepening skill through dedicated practice",
+      "category": "Learning & Growth"
+    },
+    {
+      "id": "discernment",
+      "name": "Discernment",
+      "description": "Distinguishing what matters from what does not",
+      "category": "Learning & Growth"
+    },
+    {
+      "id": "reflection",
+      "name": "Reflection",
+      "description": "Examining experiences to learn from them",
+      "category": "Learning & Growth"
+    },
+    {
+      "id": "wonder",
+      "name": "Wonder",
+      "description": "Remaining open to amazement and mystery",
+      "category": "Learning & Growth"
+    },
+    {
+      "id": "creativity",
+      "name": "Creativity",
+      "description": "Bringing new ideas or forms into being",
+      "category": "Creativity & Expression"
+    },
+    {
+      "id": "imagination",
+      "name": "Imagination",
+      "description": "Exploring possibilities in your mind",
+      "category": "Creativity & Expression"
+    },
+    {
+      "id": "originality",
+      "name": "Originality",
+      "description": "Making something distinctly your own",
+      "category": "Creativity & Expression"
+    },
+    {
+      "id": "artistry",
+      "name": "Artistry",
+      "description": "Expressing meaning through art or craft",
+      "category": "Creativity & Expression"
+    },
+    {
+      "id": "beauty",
+      "name": "Beauty",
+      "description": "Noticing and creating what feels beautiful",
+      "category": "Creativity & Expression"
+    },
+    {
+      "id": "playfulness",
+      "name": "Playfulness",
+      "description": "Approaching life with imaginative play",
+      "category": "Creativity & Expression"
+    },
+    {
+      "id": "inventiveness",
+      "name": "Inventiveness",
+      "description": "Finding novel possibilities and solutions",
+      "category": "Creativity & Expression"
+    },
+    {
+      "id": "storytelling",
+      "name": "Storytelling",
+      "description": "Sharing meaning through stories",
+      "category": "Creativity & Expression"
+    },
+    {
+      "id": "craftsmanship",
+      "name": "Craftsmanship",
+      "description": "Caring deeply about how things are made",
+      "category": "Creativity & Expression"
+    },
+    {
+      "id": "expressiveness",
+      "name": "Expressiveness",
+      "description": "Giving voice to feelings and ideas",
+      "category": "Creativity & Expression"
+    },
+    {
+      "id": "health",
+      "name": "Health",
+      "description": "Caring for your physical wellbeing",
+      "category": "Wellbeing & Inner Life"
+    },
+    {
+      "id": "vitality",
+      "name": "Vitality",
+      "description": "Living with energy and aliveness",
+      "category": "Wellbeing & Inner Life"
+    },
+    {
+      "id": "balance",
+      "name": "Balance",
+      "description": "Making room for life's competing needs",
+      "category": "Wellbeing & Inner Life"
+    },
+    {
+      "id": "peace",
+      "name": "Peace",
+      "description": "Cultivating inner and interpersonal calm",
+      "category": "Wellbeing & Inner Life"
+    },
+    {
+      "id": "calm",
+      "name": "Calm",
+      "description": "Meeting moments with steadiness",
+      "category": "Wellbeing & Inner Life"
+    },
+    {
+      "id": "mindfulness",
+      "name": "Mindfulness",
+      "description": "Paying attention to the present moment",
+      "category": "Wellbeing & Inner Life"
+    },
+    {
+      "id": "self-compassion",
+      "name": "Self-compassion",
+      "description": "Treating yourself kindly through difficulty",
+      "category": "Wellbeing & Inner Life"
+    },
+    {
+      "id": "acceptance",
+      "name": "Acceptance",
+      "description": "Making room for what you cannot control",
+      "category": "Wellbeing & Inner Life"
+    },
+    {
+      "id": "resilience",
+      "name": "Resilience",
+      "description": "Returning to what matters after setbacks",
+      "category": "Wellbeing & Inner Life"
+    },
+    {
+      "id": "rest",
+      "name": "Rest",
+      "description": "Giving yourself genuine time to recover",
+      "category": "Wellbeing & Inner Life"
+    },
+    {
+      "id": "joy",
+      "name": "Joy",
+      "description": "Welcoming delight and gladness",
+      "category": "Joy & Appreciation"
+    },
+    {
+      "id": "fun",
+      "name": "Fun",
+      "description": "Making space for enjoyable experiences",
+      "category": "Joy & Appreciation"
+    },
+    {
+      "id": "gratitude",
+      "name": "Gratitude",
+      "description": "Appreciating what is good and meaningful",
+      "category": "Joy & Appreciation"
+    },
+    {
+      "id": "appreciation",
+      "name": "Appreciation",
+      "description": "Noticing and valuing everyday gifts",
+      "category": "Joy & Appreciation"
+    },
+    {
+      "id": "humor",
+      "name": "Humor",
+      "description": "Finding and sharing what is funny",
+      "category": "Joy & Appreciation"
+    },
+    {
+      "id": "celebration",
+      "name": "Celebration",
+      "description": "Marking moments and people that matter",
+      "category": "Joy & Appreciation"
+    },
+    {
+      "id": "savoring",
+      "name": "Savoring",
+      "description": "Fully enjoying worthwhile moments",
+      "category": "Joy & Appreciation"
+    },
+    {
+      "id": "lightheartedness",
+      "name": "Lightheartedness",
+      "description": "Holding life with some ease and levity",
+      "category": "Joy & Appreciation"
+    },
+    {
+      "id": "awe",
+      "name": "Awe",
+      "description": "Feeling moved by something larger than yourself",
+      "category": "Joy & Appreciation"
+    },
+    {
+      "id": "enthusiasm",
+      "name": "Enthusiasm",
+      "description": "Bringing wholehearted energy to life",
+      "category": "Joy & Appreciation"
+    },
+    {
+      "id": "purpose",
+      "name": "Purpose",
+      "description": "Living in a direction that feels meaningful",
+      "category": "Purpose & Commitment"
+    },
+    {
+      "id": "meaning",
+      "name": "Meaning",
+      "description": "Seeking significance in your experiences",
+      "category": "Purpose & Commitment"
+    },
+    {
+      "id": "dedication",
+      "name": "Dedication",
+      "description": "Giving sustained effort to what matters",
+      "category": "Purpose & Commitment"
+    },
+    {
+      "id": "perseverance",
+      "name": "Perseverance",
+      "description": "Continuing despite difficulty",
+      "category": "Purpose & Commitment"
+    },
+    {
+      "id": "discipline",
+      "name": "Discipline",
+      "description": "Practicing chosen commitments consistently",
+      "category": "Purpose & Commitment"
+    },
+    {
+      "id": "excellence",
+      "name": "Excellence",
+      "description": "Doing meaningful work with care and quality",
+      "category": "Purpose & Commitment"
+    },
+    {
+      "id": "diligence",
+      "name": "Diligence",
+      "description": "Applying steady and attentive effort",
+      "category": "Purpose & Commitment"
+    },
+    {
+      "id": "initiative",
+      "name": "Initiative",
+      "description": "Beginning useful action without being pushed",
+      "category": "Purpose & Commitment"
+    },
+    {
+      "id": "stewardship",
+      "name": "Stewardship",
+      "description": "Taking thoughtful care of what is entrusted",
+      "category": "Purpose & Commitment"
+    },
+    {
+      "id": "consistency",
+      "name": "Consistency",
+      "description": "Returning to your principles over time",
+      "category": "Purpose & Commitment"
+    },
+    {
+      "id": "nature",
+      "name": "Nature",
+      "description": "Valuing connection with the natural world",
+      "category": "Nature & World"
+    },
+    {
+      "id": "sustainability",
+      "name": "Sustainability",
+      "description": "Living with care for future generations",
+      "category": "Nature & World"
+    },
+    {
+      "id": "conservation",
+      "name": "Conservation",
+      "description": "Protecting living places and species",
+      "category": "Nature & World"
+    },
+    {
+      "id": "environmental-care",
+      "name": "Environmental Care",
+      "description": "Acting responsibly toward ecosystems",
+      "category": "Nature & World"
+    },
+    {
+      "id": "simplicity",
+      "name": "Simplicity",
+      "description": "Choosing enough over unnecessary excess",
+      "category": "Nature & World"
+    },
+    {
+      "id": "harmony",
+      "name": "Harmony",
+      "description": "Seeking balanced coexistence with others and nature",
+      "category": "Nature & World"
+    },
+    {
+      "id": "reverence-for-life",
+      "name": "Reverence for Life",
+      "description": "Treating living things as worthy of care",
+      "category": "Nature & World"
+    },
+    {
+      "id": "interdependence",
+      "name": "Interdependence",
+      "description": "Recognizing how lives affect each other",
+      "category": "Nature & World"
+    },
+    {
+      "id": "outdoor-living",
+      "name": "Outdoor Living",
+      "description": "Making room for time in natural spaces",
+      "category": "Nature & World"
+    },
+    {
+      "id": "care-for-animals",
+      "name": "Care for Animals",
+      "description": "Treating animals with concern and respect",
+      "category": "Nature & World"
+    },
+    {
+      "id": "hope",
+      "name": "Hope",
+      "description": "Staying open to good possibilities",
+      "category": "Spirituality & Perspective"
+    },
+    {
+      "id": "faith",
+      "name": "Faith",
+      "description": "Living from deeply held trust or belief",
+      "category": "Spirituality & Perspective"
+    },
+    {
+      "id": "spirituality",
+      "name": "Spirituality",
+      "description": "Exploring connection with deeper meaning",
+      "category": "Spirituality & Perspective"
+    },
+    {
+      "id": "transcendence",
+      "name": "Transcendence",
+      "description": "Looking beyond immediate self-interest",
+      "category": "Spirituality & Perspective"
+    },
+    {
+      "id": "contemplation",
+      "name": "Contemplation",
+      "description": "Making space for thoughtful stillness",
+      "category": "Spirituality & Perspective"
+    },
+    {
+      "id": "inner-harmony",
+      "name": "Inner Harmony",
+      "description": "Seeking coherence among your values",
+      "category": "Spirituality & Perspective"
+    },
+    {
+      "id": "sacredness",
+      "name": "Sacredness",
+      "description": "Treating certain moments or things as deeply significant",
+      "category": "Spirituality & Perspective"
+    },
+    {
+      "id": "interconnectedness",
+      "name": "Interconnectedness",
+      "description": "Recognizing connection across living things",
+      "category": "Spirituality & Perspective"
+    },
+    {
+      "id": "openness",
+      "name": "Openness",
+      "description": "Receiving life without rigid certainty",
+      "category": "Spirituality & Perspective"
+    },
+    {
+      "id": "tradition",
+      "name": "Tradition",
+      "description": "Keeping meaningful practices alive",
+      "category": "Spirituality & Perspective"
+    }
+  ]
+}
