@@ -18,15 +18,11 @@ npm run preview
 
 The build runs strict TypeScript checking before producing the static application in `dist/`.
 
-## Structure
+Values and categories retain their original order and wording. Cards are native toggle buttons supporting Tab, Enter, and Space, with `aria-pressed` states and a live selection count.
 
-- `src/app/`: application entry point and page shell
-- `src/features/values/`: value types, JSON data adapter, selection state, and screen
-- `src/shared/components/`: reusable accessible selection card
-- `src/shared/styles/`: responsive global styles
-- `life_compass_intrinsic_values.json`: original source of all values and categories
+Explore with unlimited selections, case-insensitive name and description search, and one category filter at a time. Search and category filters work together and remain in place when returning from review. Review lets you remove values and continue once between 1 and 6 remain. Continue shows a simple core-values summary with an option to edit; no compass visualization is implemented yet.
 
-Values and categories retain their original order and wording. Cards are native toggle buttons supporting Tab, Enter, and Space, with `aria-pressed` states and a live selection count. Select up to 6 values; click again to deselect and make room for another. At the limit, unselected cards are marked `aria-disabled` and remain keyboard discoverable. Selection lives in application memory and resets when the page reloads. Nothing is sent to a server.
+Selected value IDs are saved to `localStorage` under `life-compass.selected-value-ids` and restored on reload. Invalid or outdated IDs are ignored. When storage is unavailable, the app still works in memory and displays a notice. Search and category filters are preserved during in-app navigation but reset on reload. Nothing is sent to a server.
 
 ## Contributing
 

@@ -1,20 +1,45 @@
+import { values } from './values.data';
+
 type SelectionListener = (selectedIds: ReadonlySet<string>) => void;
+type SelectionStorage = Pick<Storage, 'getItem' | 'setItem'>;
+export const MAX_CORE_VALUES = 6;
+export const SELECTION_STORAGE_KEY = 'life-compass.selected-value-ids';
+const validIds = new Set(values.map((value) => value.id));
 
-export const MAX_SELECTED_VALUES = 6;
+function browserStorage(): SelectionStorage | undefined {
+  try { return window.localStorage; } catch { return undefined; }
+}
 
-export function createValuesState() {
+export function createValuesState(storage = browserStorage()) {
   const selectedIds = new Set<string>();
   const listeners = new Set<SelectionListener>();
+  let persistenceAvailable = storage !== undefined;
+  try {
+    const saved: unknown = JSON.parse(storage?.getItem(SELECTION_STORAGE_KEY) ?? '[]');
+    if (Array.isArray(saved)) {
+      for (const id of saved) {
+        if (typeof id === 'string' && validIds.has(id)) selectedIds.add(id);
+      }
+    }
+  } catch { /* Invalid saved data starts an empty selection. */ }
+
+  function persist(): void {
+    try {
+      storage?.setItem(SELECTION_STORAGE_KEY, JSON.stringify([...selectedIds]));
+    } catch { persistenceAvailable = false; }
+  }
+  // Normalize outdated, duplicate, or malformed saved entries.
+  persist();
 
   return {
-    getSelectedIds(): ReadonlySet<string> {
-      return new Set(selectedIds);
-    },
+    getSelectedIds(): ReadonlySet<string> { return new Set(selectedIds); },
+    canContinue(): boolean { return selectedIds.size >= 1 && selectedIds.size <= MAX_CORE_VALUES; },
+    isPersistenceAvailable(): boolean { return persistenceAvailable; },
     toggle(id: string): void {
+      if (!validIds.has(id)) return;
       if (selectedIds.has(id)) selectedIds.delete(id);
-      else if (selectedIds.size < MAX_SELECTED_VALUES) selectedIds.add(id);
-      else return;
-      // Give subscribers a snapshot so consumers cannot mutate internal state.
+      else selectedIds.add(id);
+      persist();
       for (const listener of listeners) listener(new Set(selectedIds));
     },
     subscribe(listener: SelectionListener): () => void {
@@ -24,3 +49,5 @@ export function createValuesState() {
     },
   };
 }
+
+export type ValuesState = ReturnType<typeof createValuesState>;
