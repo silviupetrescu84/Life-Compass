@@ -1,79 +1,75 @@
-import { values } from './values.data';
+import { createJsonStorage, browserStorage } from '../../shared/storage';
+import { isValueId } from './values.data';
 
 type SelectionListener = (selectedIds: ReadonlySet<string>) => void;
-type SelectionStorage = Pick<Storage, 'getItem' | 'setItem' | 'removeItem'>;
-export const MAX_CORE_VALUES = 6;
+/** Users continue to their compass with exactly this many values. */
+export const CORE_VALUE_COUNT = 6;
 export const SELECTION_STORAGE_KEY = 'life-compass.selected-value-ids';
 export const CORE_STORAGE_KEY = 'life-compass.core-value-ids';
-const validIds = new Set(values.map((value) => value.id));
-
-function browserStorage(): SelectionStorage | undefined {
-  try { return window.localStorage; } catch { return undefined; }
-}
 
 export function createValuesState(storage = browserStorage()) {
+  const store = createJsonStorage(storage);
   const selectedIds = new Set<string>();
   const listeners = new Set<SelectionListener>();
-  let persistenceAvailable = storage !== undefined;
-  let hasCoreValues = false;
-  try {
-    const saved: unknown = JSON.parse(storage?.getItem(SELECTION_STORAGE_KEY) ?? '[]');
-    if (Array.isArray(saved)) {
-      for (const id of saved) {
-        if (typeof id === 'string' && validIds.has(id)) selectedIds.add(id);
-      }
-    }
-    const savedCore: unknown = JSON.parse(storage?.getItem(CORE_STORAGE_KEY) ?? 'null');
-    hasCoreValues = Array.isArray(savedCore) && savedCore.length >= 1 && savedCore.length <= MAX_CORE_VALUES
-      && new Set(savedCore).size === savedCore.length && savedCore.length === selectedIds.size
-      && savedCore.every((id: unknown) => typeof id === 'string' && selectedIds.has(id));
-  } catch { /* Invalid saved data starts an empty selection. */ }
+  const saved = store.read(SELECTION_STORAGE_KEY);
+  if (Array.isArray(saved)) {
+    for (const id of saved) if (isValueId(id)) selectedIds.add(id);
+  }
+  const savedCore = store.read(CORE_STORAGE_KEY);
+  // A saved compass is restored only if it still matches a complete selection.
+  let hasCoreValues =
+    Array.isArray(savedCore) &&
+    savedCore.length === CORE_VALUE_COUNT &&
+    selectedIds.size === CORE_VALUE_COUNT &&
+    new Set(savedCore).size === savedCore.length &&
+    savedCore.every((id: unknown) => typeof id === 'string' && selectedIds.has(id));
 
+  function canContinue(): boolean {
+    return selectedIds.size === CORE_VALUE_COUNT;
+  }
   function persist(): void {
-    try {
-      storage?.setItem(SELECTION_STORAGE_KEY, JSON.stringify([...selectedIds]));
-    } catch { persistenceAvailable = false; }
+    store.write(SELECTION_STORAGE_KEY, [...selectedIds]);
+  }
+  function notify(): void {
+    for (const listener of listeners) listener(new Set(selectedIds));
   }
   // Normalize outdated, duplicate, or malformed saved entries.
   persist();
 
   return {
-    getSelectedIds(): ReadonlySet<string> { return new Set(selectedIds); },
-    canContinue(): boolean { return selectedIds.size >= 1 && selectedIds.size <= MAX_CORE_VALUES; },
-    hasCoreValues(): boolean { return hasCoreValues; },
+    getSelectedIds(): ReadonlySet<string> {
+      return new Set(selectedIds);
+    },
+    canContinue,
+    hasCoreValues(): boolean {
+      return hasCoreValues;
+    },
     confirmCoreValues(): boolean {
-      if (selectedIds.size < 1 || selectedIds.size > MAX_CORE_VALUES) return false;
+      if (!canContinue()) return false;
       hasCoreValues = true;
-      try { storage?.setItem(CORE_STORAGE_KEY, JSON.stringify([...selectedIds])); }
-      catch { persistenceAvailable = false; }
+      store.write(CORE_STORAGE_KEY, [...selectedIds]);
       return true;
     },
     reset(): void {
       selectedIds.clear();
       hasCoreValues = false;
-      for (const key of [SELECTION_STORAGE_KEY, CORE_STORAGE_KEY]) {
-        try { storage?.removeItem(key); }
-        catch { persistenceAvailable = false; }
-      }
-      for (const listener of listeners) listener(new Set(selectedIds));
+      store.remove(SELECTION_STORAGE_KEY);
+      store.remove(CORE_STORAGE_KEY);
+      notify();
     },
-    isPersistenceAvailable(): boolean { return persistenceAvailable; },
+    isPersistenceAvailable: store.isAvailable,
     toggle(id: string): void {
-      if (!validIds.has(id)) return;
+      if (!isValueId(id)) return;
       if (selectedIds.has(id)) selectedIds.delete(id);
       else selectedIds.add(id);
       hasCoreValues = false;
-      try { storage?.removeItem(CORE_STORAGE_KEY); }
-      catch { persistenceAvailable = false; }
+      store.remove(CORE_STORAGE_KEY);
       persist();
-      for (const listener of listeners) listener(new Set(selectedIds));
+      notify();
     },
-    subscribe(listener: SelectionListener): () => void {
+    subscribe(listener: SelectionListener): void {
       listeners.add(listener);
       listener(new Set(selectedIds));
-      return () => { listeners.delete(listener); };
     },
   };
 }
-
-export type ValuesState = ReturnType<typeof createValuesState>;

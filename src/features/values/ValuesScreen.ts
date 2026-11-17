@@ -1,12 +1,22 @@
 import { createSelectableCard } from '../../shared/components/SelectableCard';
+import { persistenceNote } from '../../shared/storage';
+import { countValues } from '../../shared/text';
 import { valueCategories, values } from './values.data';
-import { createValuesState } from './values.state';
+import { CORE_VALUE_COUNT, createValuesState } from './values.state';
+import { createValueNotes } from './values.notes';
 import { filterValues } from './values.filters';
-import { createReviewScreen } from './ReviewScreen';
 import { createCompassScreen } from '../compass/CompassScreen';
+
+function selectionGuidance(selected: number): string {
+  const missing = CORE_VALUE_COUNT - selected;
+  if (missing > 0) return `Add ${countValues(missing)} to continue.`;
+  if (missing < 0) return `Remove ${countValues(-missing)} to continue.`;
+  return 'Ready when you are.';
+}
 
 export function createValuesScreen(): HTMLElement {
   const state = createValuesState();
+  const notes = createValueNotes();
   let search = '';
   let category: string | null = null;
   let exploreScroll = 0;
@@ -19,7 +29,7 @@ export function createValuesScreen(): HTMLElement {
       <p class="eyebrow"><span aria-hidden="true">✧</span> A little reflection. A meaningful beginning.</p>
       <h1 id="page-title" tabindex="-1">What matters most to you?</h1>
       <p class="introduction__description">Explore the values that feel important to you. Choose the ones you want to bring into your life.</p>
-      <div class="guidance"><span class="guidance__symbol" aria-hidden="true">↗</span><p>Explore freely. Follow what feels true to you.<br><span>Choose as many as you like, then review and narrow them to 6 core values. You can change these later.</span></p></div>
+      <div class="guidance"><span class="guidance__symbol" aria-hidden="true">↗</span><p>Explore freely. Follow what feels true to you.<br><span>Choose the ${CORE_VALUE_COUNT} values that matter most to you. You can change them later.</span></p></div>
     </section>
     <div class="filters">
       <label for="value-search">Search values</label>
@@ -48,7 +58,11 @@ export function createValuesScreen(): HTMLElement {
     const grid = document.createElement('div');
     grid.className = 'values-grid';
     for (const value of group.values) {
-      const card = createSelectableCard({ name: value.name, description: value.description, onToggle: () => state.toggle(value.id) });
+      const card = createSelectableCard({
+        name: value.name,
+        description: value.description,
+        onToggle: () => state.toggle(value.id),
+      });
       cards.set(value.id, card);
       grid.append(card.element);
     }
@@ -64,9 +78,9 @@ export function createValuesScreen(): HTMLElement {
     for (const { section, count, group } of sections) {
       const size = group.values.filter((value) => ids.has(value.id)).length;
       section.hidden = size === 0;
-      count.textContent = `${size} ${size === 1 ? 'value' : 'values'}`;
+      count.textContent = countValues(size);
     }
-    explore.querySelector('.results-count')!.textContent = `${matches.length} ${matches.length === 1 ? 'value' : 'values'} to explore`;
+    explore.querySelector('.results-count')!.textContent = `${countValues(matches.length)} to explore`;
     explore.querySelector<HTMLElement>('.empty-state')!.hidden = matches.length !== 0;
     for (const chip of chips.querySelectorAll('button')) {
       chip.setAttribute('aria-pressed', String(chip.dataset.category === (category ?? '')));
@@ -78,10 +92,16 @@ export function createValuesScreen(): HTMLElement {
     chip.className = 'category-chip';
     chip.dataset.category = name ?? '';
     chip.textContent = name ?? 'All';
-    chip.addEventListener('click', () => { category = name; applyFilters(); });
+    chip.addEventListener('click', () => {
+      category = name;
+      applyFilters();
+    });
     chips.append(chip);
   }
-  input.addEventListener('input', () => { search = input.value; applyFilters(); });
+  input.addEventListener('input', () => {
+    search = input.value;
+    applyFilters();
+  });
   explore.querySelector('.clear-filters')!.addEventListener('click', () => {
     category = null;
     search = '';
@@ -94,54 +114,57 @@ export function createValuesScreen(): HTMLElement {
   const bar = document.createElement('aside');
   bar.className = 'selection-bar';
   bar.setAttribute('aria-label', 'Your selection');
-  bar.innerHTML = '<div class="selection-bar__inner"><div><p class="selection-count" role="status" aria-live="polite" aria-atomic="true"></p><p class="storage-note"></p></div><button type="button" class="primary-button">Review my values</button></div>';
-  const reviewButton = bar.querySelector<HTMLButtonElement>('button')!;
-  const compass = createCompassScreen(() => show('explore'), () => {
-    state.reset();
-    search = '';
-    category = null;
-    input.value = '';
-    exploreScroll = 0;
-    applyFilters();
-    show('explore');
-  });
-  const review = createReviewScreen(state, () => show('explore'), () => {
-    if (state.confirmCoreValues()) show('compass');
-  });
-
-  function show(view: 'explore' | 'review' | 'compass', focus = true): void {
+  bar.innerHTML =
+    '<div class="selection-bar__inner"><div><div role="status" aria-live="polite" aria-atomic="true"><p class="selection-count"></p><p id="selection-guidance" class="selection-guidance"></p></div><p class="storage-note"></p></div><button type="button" class="primary-button" aria-describedby="selection-guidance">Continue</button></div>';
+  const continueButton = bar.querySelector<HTMLButtonElement>('button')!;
+  const compass = createCompassScreen(
+    notes,
+    () => show('explore'),
+    () => {
+      state.reset();
+      notes.clear();
+      search = '';
+      category = null;
+      input.value = '';
+      exploreScroll = 0;
+      applyFilters();
+      show('explore');
+    },
+  );
+  function show(view: 'explore' | 'compass', focus = true): void {
     if (!explore.hidden) exploreScroll = window.scrollY;
     explore.hidden = view !== 'explore';
-    review.element.hidden = view !== 'review';
     compass.element.hidden = view !== 'compass';
     bar.hidden = view !== 'explore';
     screen.classList.toggle('main-content--compass', view === 'compass');
-    if (view === 'review') review.render();
     if (view === 'compass') {
       const selectedIds = state.getSelectedIds();
       compass.render(values.filter((value) => selectedIds.has(value.id)));
     }
-    const active = view === 'explore' ? explore : view === 'review' ? review.element : compass.element;
+    const active = view === 'explore' ? explore : compass.element;
     if (focus) {
       active.querySelector('h1')?.focus({ preventScroll: true });
       window.scrollTo(0, view === 'explore' ? exploreScroll : 0);
     }
   }
-  reviewButton.addEventListener('click', () => show('review'));
+  // The state confirms only a complete selection, even if the button were somehow enabled.
+  continueButton.addEventListener('click', () => {
+    if (state.confirmCoreValues()) show('compass');
+  });
   state.subscribe((selectedIds) => {
     for (const [id, card] of cards) card.setSelected(selectedIds.has(id));
-    bar.querySelector('.selection-count')!.textContent = `${selectedIds.size} ${selectedIds.size === 1 ? 'value' : 'values'} selected`;
-    bar.querySelector('.storage-note')!.textContent = state.isPersistenceAvailable()
-      ? 'Saved on this device. You can change these later.'
-      : 'Storage unavailable. Your choices will last for this visit only.';
-    reviewButton.disabled = selectedIds.size === 0;
+    bar.querySelector('.selection-count')!.textContent =
+      `${selectedIds.size} of ${countValues(CORE_VALUE_COUNT)} selected`;
+    bar.querySelector('.selection-guidance')!.textContent = selectionGuidance(selectedIds.size);
+    bar.querySelector('.storage-note')!.textContent = persistenceNote(state.isPersistenceAvailable(), 'choices');
+    continueButton.disabled = !state.canContinue();
   });
   // Reserve the actual bar height, including wrapped mobile text and safe-area padding.
-  const observer = new ResizeObserver(([entry]) => {
-    if (entry && !bar.hidden) screen.style.setProperty('--selection-bar-height', `${bar.getBoundingClientRect().height}px`);
+  const observer = new ResizeObserver(() => {
+    if (!bar.hidden) screen.style.setProperty('--selection-bar-height', `${bar.getBoundingClientRect().height}px`);
   });
   observer.observe(bar);
-  screen.append(explore, review.element, compass.element, bar);
+  screen.append(explore, compass.element, bar);
   if (state.hasCoreValues()) show('compass', false);
   return screen;
 }
