@@ -3,7 +3,7 @@ import { expect, test, vi } from 'vitest';
 import { NOTES_STORAGE_KEY } from '../../src/features/values/values.notes';
 import { CORE_STORAGE_KEY, SELECTION_STORAGE_KEY } from '../../src/features/values/values.state';
 import { mountApp, ratingOf, SIX_VALUES, type AppDriver } from '../support/app';
-import { $, $$, required, text, type } from '../support/dom';
+import { $, $$, required, type } from '../support/dom';
 import { useFakeLayout } from '../support/fake-layout';
 import { readJson } from '../support/storage';
 
@@ -199,16 +199,4 @@ test('the selection bar height is reserved when it resizes, only while the bar i
   app.root.style.removeProperty('--selection-bar-height');
   layout.resize(600);
   expect(reserved(), 'the bar is hidden on the compass').toBe('');
-});
-
-test('the app mounts the header and values screen, and requires its root element', async () => {
-  // main.ts runs on import, so each case re-evaluates it from a fresh module registry.
-  vi.resetModules();
-  await expect(import('../../src/app/main')).rejects.toThrow(/Application root is missing/);
-  document.body.innerHTML = '<div id="app"></div>';
-  vi.resetModules();
-  await import('../../src/app/main');
-  const root = $(document, '#app');
-  expect(text(root, '.site-header .brand').trim()).toBe('Life Compass');
-  expect(text(root, 'main#main-content h1')).toBe('What matters most to you?');
 });

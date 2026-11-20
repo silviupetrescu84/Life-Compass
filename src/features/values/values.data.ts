@@ -1,4 +1,4 @@
-import library from '../../../life_compass_intrinsic_values.json';
+import library from '../../../life_compass_intrinsic_values.json' with { type: 'json' };
 import type { Value, ValueCategory } from './values.types';
 
 export const values: readonly Value[] = library.values;

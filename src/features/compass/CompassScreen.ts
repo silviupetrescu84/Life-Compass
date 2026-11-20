@@ -26,7 +26,12 @@ const PLACEHOLDER = {
   description: 'Tap or click a value on your compass to explore its meaning and describe it in your own words.',
 };
 
-export function createCompassScreen(notes: ValueNotes, onExplore: () => void, onReset: () => void) {
+export function createCompassScreen(
+  notes: ValueNotes,
+  onExplore: () => void,
+  onReset: () => void,
+  saveToAccount?: () => Promise<boolean>,
+) {
   const element = document.createElement('section');
   element.className = 'compass-screen';
   element.hidden = true;
@@ -42,7 +47,7 @@ export function createCompassScreen(notes: ValueNotes, onExplore: () => void, on
     <p class="compass-reflection">Your values are directions, not destinations. You can return and change them as you grow.</p>
     <div class="compass-actions"><button class="primary-button explore-button" type="button">Explore my values</button><button class="text-button restart-button" type="button" aria-expanded="false" aria-controls="restart-confirmation">Start again</button></div>
     <section id="restart-confirmation" class="restart-confirmation" aria-labelledby="restart-title" hidden>
-      <h2 id="restart-title">Start again?</h2><p>This will clear your selected values, your ratings, definitions, reflections, and small actions, and your saved compass on this device. You can then explore with a fresh start.</p>
+      <h2 id="restart-title">Start again?</h2><p>This will clear your selected values, your ratings, definitions, reflections, and small actions, and your saved compass ${saveToAccount ? 'from your account' : 'on this device'}. You can then explore with a fresh start.</p>
       <div class="compass-actions"><button class="primary-button cancel-restart" type="button">Keep my values</button><button class="text-button confirm-restart" type="button">Clear my values</button></div>
     </section>
   `;
@@ -53,7 +58,7 @@ export function createCompassScreen(notes: ValueNotes, onExplore: () => void, on
   const restart = element.querySelector<HTMLButtonElement>('.restart-button')!;
   const confirmation = element.querySelector<HTMLElement>('.restart-confirmation')!;
   const cancel = element.querySelector<HTMLButtonElement>('.cancel-restart')!;
-  const saveBar = createNotesSaveBar(notes);
+  const saveBar = createNotesSaveBar(notes, saveToAccount);
   const notesForm = createValueNotesForm(notes, () => saveBar.refresh());
   detail.append(notesForm.element);
   detail.after(saveBar.element);
@@ -262,6 +267,7 @@ export function createCompassScreen(notes: ValueNotes, onExplore: () => void, on
 
   return {
     element,
+    disconnect: () => observer.disconnect(),
     render(selectedValues: readonly Value[]): void {
       coreValues = selectedValues;
       showDetail(coreValues.find((value) => value.id === activeId) ?? null);

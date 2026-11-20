@@ -1,6 +1,39 @@
+import { basename } from 'node:path';
+import type { PreviewServer, ViteDevServer } from 'vite';
 import { defineConfig } from 'vitest/config';
 
+async function enableAccounts(server: ViteDevServer | PreviewServer): Promise<void> {
+  if (server.config.mode === 'test') return;
+  const { createApi } = await import('./server/api.ts');
+  const api = createApi();
+  server.httpServer?.once('close', api.close);
+  server.middlewares.use((req, res, next) => {
+    if (req.url?.startsWith('/api/')) void api.handle(req, res);
+    else next();
+  });
+}
+
 export default defineConfig({
+  plugins: [
+    {
+      name: 'life-compass-api',
+      configureServer: enableAccounts,
+      configurePreviewServer: enableAccounts,
+    },
+  ],
+  server: {
+    fs: {
+      deny: [
+        '.env',
+        '.env.*',
+        '*.{crt,pem}',
+        '**/.git/**',
+        '**/data/**',
+        '**/*.sqlite*',
+        ...(process.env.LIFE_COMPASS_DB ? [`**/${basename(process.env.LIFE_COMPASS_DB)}*`] : []),
+      ],
+    },
+  },
   test: {
     // Undo vi.spyOn and vi.stubGlobal after every test so tests cannot leak into each other.
     restoreMocks: true,

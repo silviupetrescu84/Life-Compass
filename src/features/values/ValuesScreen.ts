@@ -1,5 +1,5 @@
 import { createSelectableCard } from '../../shared/components/SelectableCard';
-import { persistenceNote } from '../../shared/storage';
+import { persistenceNote, type KeyValueStorage } from '../../shared/storage';
 import { countValues } from '../../shared/text';
 import { valueCategories, values } from './values.data';
 import { CORE_VALUE_COUNT, createValuesState } from './values.state';
@@ -14,9 +14,14 @@ function selectionGuidance(selected: number): string {
   return 'Ready when you are.';
 }
 
-export function createValuesScreen(): HTMLElement {
-  const state = createValuesState();
-  const notes = createValueNotes();
+export function createValuesScreen(account?: {
+  storage: KeyValueStorage;
+  save: () => Promise<boolean>;
+  clearNotes: () => void;
+  signal: AbortSignal;
+}): HTMLElement {
+  const state = createValuesState(account?.storage);
+  const notes = createValueNotes(account?.storage);
   let search = '';
   let category: string | null = null;
   let exploreScroll = 0;
@@ -61,7 +66,10 @@ export function createValuesScreen(): HTMLElement {
       const card = createSelectableCard({
         name: value.name,
         description: value.description,
-        onToggle: () => state.toggle(value.id),
+        onToggle: () => {
+          state.toggle(value.id);
+          void account?.save();
+        },
       });
       cards.set(value.id, card);
       grid.append(card.element);
@@ -123,6 +131,8 @@ export function createValuesScreen(): HTMLElement {
     () => {
       state.reset();
       notes.clear();
+      account?.clearNotes();
+      void account?.save();
       search = '';
       category = null;
       input.value = '';
@@ -130,6 +140,7 @@ export function createValuesScreen(): HTMLElement {
       applyFilters();
       show('explore');
     },
+    account?.save,
   );
   function show(view: 'explore' | 'compass', focus = true): void {
     if (!explore.hidden) exploreScroll = window.scrollY;
@@ -149,14 +160,19 @@ export function createValuesScreen(): HTMLElement {
   }
   // The state confirms only a complete selection, even if the button were somehow enabled.
   continueButton.addEventListener('click', () => {
-    if (state.confirmCoreValues()) show('compass');
+    if (state.confirmCoreValues()) {
+      void account?.save();
+      show('compass');
+    }
   });
   state.subscribe((selectedIds) => {
     for (const [id, card] of cards) card.setSelected(selectedIds.has(id));
     bar.querySelector('.selection-count')!.textContent =
       `${selectedIds.size} of ${countValues(CORE_VALUE_COUNT)} selected`;
     bar.querySelector('.selection-guidance')!.textContent = selectionGuidance(selectedIds.size);
-    bar.querySelector('.storage-note')!.textContent = persistenceNote(state.isPersistenceAvailable(), 'choices');
+    bar.querySelector('.storage-note')!.textContent = account
+      ? 'Your choices are saved automatically.'
+      : persistenceNote(state.isPersistenceAvailable(), 'choices');
     continueButton.disabled = !state.canContinue();
   });
   // Reserve the actual bar height, including wrapped mobile text and safe-area padding.
@@ -164,6 +180,10 @@ export function createValuesScreen(): HTMLElement {
     if (!bar.hidden) screen.style.setProperty('--selection-bar-height', `${bar.getBoundingClientRect().height}px`);
   });
   observer.observe(bar);
+  account?.signal.addEventListener('abort', () => {
+    observer.disconnect();
+    compass.disconnect();
+  });
   screen.append(explore, compass.element, bar);
   if (state.hasCoreValues()) show('compass', false);
   return screen;

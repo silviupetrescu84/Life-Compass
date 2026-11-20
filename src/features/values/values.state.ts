@@ -1,11 +1,11 @@
 import { createJsonStorage, browserStorage } from '../../shared/storage';
+import { CORE_STORAGE_KEY, SELECTION_STORAGE_KEY } from '../../shared/compass-data';
 import { isValueId } from './values.data';
 
 type SelectionListener = (selectedIds: ReadonlySet<string>) => void;
 /** Users continue to their compass with exactly this many values. */
 export const CORE_VALUE_COUNT = 6;
-export const SELECTION_STORAGE_KEY = 'life-compass.selected-value-ids';
-export const CORE_STORAGE_KEY = 'life-compass.core-value-ids';
+export { CORE_STORAGE_KEY, SELECTION_STORAGE_KEY };
 
 export function createValuesState(storage = browserStorage()) {
   const store = createJsonStorage(storage);

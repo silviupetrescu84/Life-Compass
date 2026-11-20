@@ -52,11 +52,6 @@ button {
   width: 36px;
   height: 36px;
 }
-.header-note {
-  display: none;
-  font-size: 12px;
-  color: var(--muted);
-}
 .main-content {
   max-width: 1160px;
   margin: auto;
@@ -278,9 +273,6 @@ h2 {
   }
 }
 @media (min-width: 640px) {
-  .header-note {
-    display: block;
-  }
   .introduction {
     padding-top: 65px;
   }
@@ -691,4 +683,95 @@ textarea {
   .compass-stage {
     animation: none;
   }
+}
+
+.account-controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+}
+.account-controls[hidden] {
+  display: none;
+}
+.account-email {
+  color: var(--muted);
+  font-size: 13px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.logout-button {
+  flex-shrink: 0;
+}
+.account-screen {
+  padding-top: clamp(32px, 9vw, 94px);
+}
+.account-card {
+  width: min(100%, 440px);
+  margin-inline: auto;
+  padding: clamp(24px, 6vw, 40px);
+  border: 1px solid #dce2d8;
+  border-radius: 16px;
+  background: #fdfefb;
+}
+.account-card h1 {
+  margin-bottom: 28px;
+  font-size: clamp(30px, 6vw, 42px);
+}
+.account-form {
+  display: grid;
+  gap: 8px;
+}
+.account-form label {
+  font-size: 14px;
+  font-weight: 600;
+}
+.account-form input {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 12px 14px;
+  border: 1px solid #c7d0c3;
+  border-radius: 8px;
+  background: white;
+  color: inherit;
+  font: inherit;
+}
+.account-password-hint,
+.account-error {
+  margin: 0 0 8px;
+  font-size: 13px;
+}
+.account-password-hint {
+  color: var(--muted);
+}
+.account-error,
+.account-feedback {
+  color: #7a3527;
+}
+.account-error:empty {
+  margin: 0;
+}
+.account-switch {
+  margin-top: 16px;
+}
+.account-feedback {
+  position: sticky;
+  z-index: 3;
+  top: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  max-width: 1160px;
+  margin-inline: auto;
+  padding: 0 24px;
+  background: #f7f8f2;
+  font-size: 14px;
+}
+.account-feedback p {
+  margin: 0;
+}
+.account-feedback p:not(:empty) {
+  margin-block: 10px;
 }

@@ -1,7 +1,8 @@
-import { browserStorage, createJsonStorage } from '../../shared/storage';
-import { isValueId } from './values.data';
+import { browserStorage, createJsonStorage } from '../../shared/storage.ts';
+import { NOTES_STORAGE_KEY } from '../../shared/compass-data.ts';
+import { isValueId } from './values.data.ts';
 
-export const NOTES_STORAGE_KEY = 'life-compass.value-notes';
+export { NOTES_STORAGE_KEY };
 // Generous for personal writing while keeping every note well within localStorage quotas.
 export const MAX_NOTE_LENGTH = 5000;
 export const NOTE_FIELDS = ['definition', 'reflection'] as const;
@@ -55,7 +56,7 @@ function toActions(input: unknown): readonly ValueAction[] {
 }
 
 // Turns saved or edited data into a valid note: text is capped, invalid parts become empty.
-function toNote(input: unknown): ValueNote {
+export function toNote(input: unknown): ValueNote {
   const entry: Partial<Record<keyof ValueNote, unknown>> = typeof input === 'object' && input !== null ? input : {};
   const note = { ...DEFAULT_NOTE };
   for (const field of NOTE_FIELDS) {
