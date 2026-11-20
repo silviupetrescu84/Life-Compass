@@ -1,0 +1,1684 @@
+{
+  "title": "Life Compass — Values Quiz",
+  "version": 1,
+  "valueLibrary": "life_compass_intrinsic_values.json",
+  "description": "A short, reflective values-discovery exercise. Answer five questions; repeated value signals suggest values to explore, not an objective personality result.",
+  "settings": {
+    "questionsPerSession": 5,
+    "selectionType": "single",
+    "allowRetake": true,
+    "maxSuggestedValues": 6
+  },
+  "scoring": {
+    "method": "weighted_value_overlap",
+    "rules": [
+      "Each selected answer adds 1 point to each valueId in that answer.",
+      "Track how many different answered questions supported each valueId; this is the overlap count.",
+      "Rank by overlap count first, then total points, then the original order in the values library for deterministic ties.",
+      "Use valueIds to look up value names and descriptions; do not invent new IDs.",
+      "Results are tentative suggestions; let the user accept, replace, or reject up to six values."
+    ],
+    "categorySelection": "Category relevance is the sum of scores of values in the category, used ONLY to select follow-up questions, never as a value score.",
+    "tieHandling": "Return all tied candidates in ranked order up to maxSuggestedValues; do not claim ties are precise distinctions."
+  },
+  "questionSelection": {
+    "mode": "adaptive_five_question",
+    "steps": [
+      {
+        "number": 1,
+        "pool": "explore",
+        "rule": "Choose one exploratory question, rotating between sessions."
+      },
+      {
+        "number": 2,
+        "pool": "explore",
+        "rule": "Choose a different exploratory question. Prefer one whose options cover categories not favored by the first answer."
+      },
+      {
+        "number": 3,
+        "pool": "focus",
+        "rule": "Ask the first focused question from the highest-scoring category represented by answers so far."
+      },
+      {
+        "number": 4,
+        "pool": "focus",
+        "rule": "Ask the first focused question from the second-highest-scoring category, if distinct; otherwise ask an unused broad question."
+      },
+      {
+        "number": 5,
+        "pool": "focus",
+        "rule": "Ask the other focused question for the leading category, preferably where a value already received a signal; never repeat a question."
+      }
+    ],
+    "fallback": "If scores are tied or categories are unrepresented, choose deterministically with the current session seed, ensuring five distinct questions.",
+    "biasNotice": "Five answers cannot reliably distinguish all 120 values. Avoid presenting results as a validated psychological assessment."
+  },
+  "questions": [
+    {
+      "id": "explore_01",
+      "stage": "explore",
+      "question": "Which moment would feel most fulfilling?",
+      "options": [
+        {
+          "id": "e01_01",
+          "text": "A real conversation with someone close",
+          "valueIds": [
+            "connection",
+            "presence",
+            "love"
+          ]
+        },
+        {
+          "id": "e01_02",
+          "text": "Discovering something that surprises me",
+          "valueIds": [
+            "curiosity",
+            "wonder",
+            "learning"
+          ]
+        },
+        {
+          "id": "e01_03",
+          "text": "Making something original",
+          "valueIds": [
+            "creativity",
+            "originality",
+            "self-expression"
+          ]
+        },
+        {
+          "id": "e01_04",
+          "text": "Helping someone through difficulty",
+          "valueIds": [
+            "compassion",
+            "service",
+            "kindness"
+          ]
+        },
+        {
+          "id": "e01_05",
+          "text": "Having room to make my own choices",
+          "valueIds": [
+            "freedom",
+            "autonomy",
+            "agency"
+          ]
+        },
+        {
+          "id": "e01_06",
+          "text": "Feeling peaceful and fully in the moment",
+          "valueIds": [
+            "peace",
+            "calm",
+            "mindfulness"
+          ]
+        },
+        {
+          "id": "e01_07",
+          "text": "Seeing an effort make a difference",
+          "valueIds": [
+            "purpose",
+            "contribution",
+            "dedication"
+          ]
+        },
+        {
+          "id": "e01_08",
+          "text": "Being outdoors and noticing nature",
+          "valueIds": [
+            "nature",
+            "outdoor-living",
+            "awe"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "explore_02",
+      "stage": "explore",
+      "question": "What would you protect time for in a busy week?",
+      "options": [
+        {
+          "id": "e02_01",
+          "text": "Time with friends and loved ones",
+          "valueIds": [
+            "friendship",
+            "affection",
+            "mutuality"
+          ]
+        },
+        {
+          "id": "e02_02",
+          "text": "Learning or mastering something new",
+          "valueIds": [
+            "growth",
+            "mastery",
+            "understanding"
+          ]
+        },
+        {
+          "id": "e02_03",
+          "text": "Art, imagination, or creative expression",
+          "valueIds": [
+            "artistry",
+            "imagination",
+            "expressiveness"
+          ]
+        },
+        {
+          "id": "e02_04",
+          "text": "Rest, movement, and personal health",
+          "valueIds": [
+            "rest",
+            "health",
+            "balance"
+          ]
+        },
+        {
+          "id": "e02_05",
+          "text": "Making the world a little fairer",
+          "valueIds": [
+            "justice",
+            "equality",
+            "fairness"
+          ]
+        },
+        {
+          "id": "e02_06",
+          "text": "An adventure outside my routine",
+          "valueIds": [
+            "adventure",
+            "exploration",
+            "spontaneity"
+          ]
+        },
+        {
+          "id": "e02_07",
+          "text": "Keeping a meaningful promise",
+          "valueIds": [
+            "integrity",
+            "reliability",
+            "responsibility"
+          ]
+        },
+        {
+          "id": "e02_08",
+          "text": "A quiet moment of reflection or faith",
+          "valueIds": [
+            "reflection",
+            "contemplation",
+            "faith"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "explore_03",
+      "stage": "explore",
+      "question": "Which quality would you most admire in your future self?",
+      "options": [
+        {
+          "id": "e03_01",
+          "text": "Being reliably honest even when it is hard",
+          "valueIds": [
+            "honesty",
+            "sincerity",
+            "courage"
+          ]
+        },
+        {
+          "id": "e03_02",
+          "text": "Standing up for people’s dignity",
+          "valueIds": [
+            "respect",
+            "equity",
+            "inclusion"
+          ]
+        },
+        {
+          "id": "e03_03",
+          "text": "Making others feel at home",
+          "valueIds": [
+            "hospitality",
+            "belonging",
+            "community"
+          ]
+        },
+        {
+          "id": "e03_04",
+          "text": "Finding joy and sharing laughter",
+          "valueIds": [
+            "joy",
+            "humor",
+            "playfulness"
+          ]
+        },
+        {
+          "id": "e03_05",
+          "text": "Acting independently without seeking approval",
+          "valueIds": [
+            "independence",
+            "authenticity",
+            "self-respect"
+          ]
+        },
+        {
+          "id": "e03_06",
+          "text": "Following through with care and effort",
+          "valueIds": [
+            "diligence",
+            "discipline",
+            "excellence"
+          ]
+        },
+        {
+          "id": "e03_07",
+          "text": "Living gently with people and animals",
+          "valueIds": [
+            "gentleness",
+            "care-for-animals",
+            "reverence-for-life"
+          ]
+        },
+        {
+          "id": "e03_08",
+          "text": "Seeing situations from different points of view",
+          "valueIds": [
+            "wisdom",
+            "open-mindedness",
+            "empathy"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "explore_04",
+      "stage": "explore",
+      "question": "When something difficult happens, what would guide you?",
+      "options": [
+        {
+          "id": "e04_01",
+          "text": "Treating myself with compassion",
+          "valueIds": [
+            "self-compassion",
+            "acceptance",
+            "resilience"
+          ]
+        },
+        {
+          "id": "e04_02",
+          "text": "Speaking the truth and taking responsibility",
+          "valueIds": [
+            "honesty",
+            "accountability",
+            "integrity"
+          ]
+        },
+        {
+          "id": "e04_03",
+          "text": "Being patient and forgiving",
+          "valueIds": [
+            "patience",
+            "forgiveness",
+            "compassion"
+          ]
+        },
+        {
+          "id": "e04_04",
+          "text": "Finding new ways forward",
+          "valueIds": [
+            "inventiveness",
+            "initiative",
+            "agency"
+          ]
+        },
+        {
+          "id": "e04_05",
+          "text": "Asking for support and cooperating",
+          "valueIds": [
+            "trust",
+            "cooperation",
+            "solidarity"
+          ]
+        },
+        {
+          "id": "e04_06",
+          "text": "Choosing what matters over what is easy",
+          "valueIds": [
+            "purpose",
+            "perseverance",
+            "dedication"
+          ]
+        },
+        {
+          "id": "e04_07",
+          "text": "Taking a pause and restoring balance",
+          "valueIds": [
+            "calm",
+            "rest",
+            "mindfulness"
+          ]
+        },
+        {
+          "id": "e04_08",
+          "text": "Holding on to hope while remaining open",
+          "valueIds": [
+            "hope",
+            "openness",
+            "inner-harmony"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "explore_05",
+      "stage": "explore",
+      "question": "What kind of impact would you like to leave behind?",
+      "options": [
+        {
+          "id": "e05_01",
+          "text": "Stronger, more loving relationships",
+          "valueIds": [
+            "love",
+            "intimacy",
+            "loyalty"
+          ]
+        },
+        {
+          "id": "e05_02",
+          "text": "A welcoming and supportive community",
+          "valueIds": [
+            "community",
+            "inclusion",
+            "generosity"
+          ]
+        },
+        {
+          "id": "e05_03",
+          "text": "Something beautiful or expressive",
+          "valueIds": [
+            "beauty",
+            "artistry",
+            "storytelling"
+          ]
+        },
+        {
+          "id": "e05_04",
+          "text": "A healthier environment",
+          "valueIds": [
+            "conservation",
+            "sustainability",
+            "environmental-care"
+          ]
+        },
+        {
+          "id": "e05_05",
+          "text": "New ideas and deep learning",
+          "valueIds": [
+            "curiosity",
+            "inventiveness",
+            "wisdom"
+          ]
+        },
+        {
+          "id": "e05_06",
+          "text": "Fair treatment and peaceful cooperation",
+          "valueIds": [
+            "justice",
+            "civility",
+            "cooperation"
+          ]
+        },
+        {
+          "id": "e05_07",
+          "text": "A meaningful tradition",
+          "valueIds": [
+            "tradition",
+            "sacredness",
+            "stewardship"
+          ]
+        },
+        {
+          "id": "e05_08",
+          "text": "A spirit of fun and celebration",
+          "valueIds": [
+            "fun",
+            "celebration",
+            "enthusiasm"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "explore_06",
+      "stage": "explore",
+      "question": "What would make an ordinary day feel more like your own?",
+      "options": [
+        {
+          "id": "e06_01",
+          "text": "Freedom to follow my interests",
+          "valueIds": [
+            "freedom",
+            "self-direction",
+            "nonconformity"
+          ]
+        },
+        {
+          "id": "e06_02",
+          "text": "Careful work I can feel proud of",
+          "valueIds": [
+            "craftsmanship",
+            "excellence",
+            "mastery"
+          ]
+        },
+        {
+          "id": "e06_03",
+          "text": "A grateful pause to enjoy what is good",
+          "valueIds": [
+            "gratitude",
+            "savoring",
+            "appreciation"
+          ]
+        },
+        {
+          "id": "e06_04",
+          "text": "Meaningful time with others",
+          "valueIds": [
+            "connection",
+            "presence",
+            "mutuality"
+          ]
+        },
+        {
+          "id": "e06_05",
+          "text": "A chance to serve or contribute",
+          "valueIds": [
+            "service",
+            "contribution",
+            "initiative"
+          ]
+        },
+        {
+          "id": "e06_06",
+          "text": "Open space to reflect or contemplate",
+          "valueIds": [
+            "reflection",
+            "contemplation",
+            "spirituality"
+          ]
+        },
+        {
+          "id": "e06_07",
+          "text": "Time outside in a connected world",
+          "valueIds": [
+            "nature",
+            "interdependence",
+            "harmony"
+          ]
+        },
+        {
+          "id": "e06_08",
+          "text": "Room for spontaneity and play",
+          "valueIds": [
+            "spontaneity",
+            "playfulness",
+            "lightheartedness"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "focus_01_1",
+      "stage": "focus",
+      "category": "Love & Relationships",
+      "question": "What makes a relationship feel meaningful to you?",
+      "options": [
+        {
+          "id": "f01_1_01",
+          "text": "Caring for someone and showing warmth",
+          "valueIds": [
+            "love",
+            "affection"
+          ]
+        },
+        {
+          "id": "f01_1_02",
+          "text": "Spending real time together, fully present",
+          "valueIds": [
+            "connection",
+            "presence"
+          ]
+        },
+        {
+          "id": "f01_1_03",
+          "text": "Building friendships where we can count on each other",
+          "valueIds": [
+            "friendship",
+            "trust"
+          ]
+        },
+        {
+          "id": "f01_1_04",
+          "text": "Sharing private thoughts and being accepted",
+          "valueIds": [
+            "intimacy",
+            "belonging"
+          ]
+        },
+        {
+          "id": "f01_1_05",
+          "text": "Standing by each other and giving back",
+          "valueIds": [
+            "loyalty",
+            "mutuality"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "focus_01_2",
+      "stage": "focus",
+      "category": "Love & Relationships",
+      "question": "Which relationship experience would you make more room for?",
+      "options": [
+        {
+          "id": "f01_2_01",
+          "text": "A deep bond where affection feels natural",
+          "valueIds": [
+            "intimacy",
+            "affection"
+          ]
+        },
+        {
+          "id": "f01_2_02",
+          "text": "Feeling included and genuinely connected",
+          "valueIds": [
+            "belonging",
+            "connection"
+          ]
+        },
+        {
+          "id": "f01_2_03",
+          "text": "Trusting a friend with something important",
+          "valueIds": [
+            "trust",
+            "friendship"
+          ]
+        },
+        {
+          "id": "f01_2_04",
+          "text": "Showing up for someone I love",
+          "valueIds": [
+            "loyalty",
+            "love"
+          ]
+        },
+        {
+          "id": "f01_2_05",
+          "text": "Being attentive to each other’s needs",
+          "valueIds": [
+            "presence",
+            "mutuality"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "focus_02_1",
+      "stage": "focus",
+      "category": "Kindness & Care",
+      "question": "Which way of caring feels most meaningful?",
+      "options": [
+        {
+          "id": "f02_1_01",
+          "text": "Offering a gentle word when it is needed",
+          "valueIds": [
+            "kindness",
+            "gentleness"
+          ]
+        },
+        {
+          "id": "f02_1_02",
+          "text": "Noticing pain and trying to understand it",
+          "valueIds": [
+            "compassion",
+            "empathy"
+          ]
+        },
+        {
+          "id": "f02_1_03",
+          "text": "Sharing resources to make a positive difference",
+          "valueIds": [
+            "generosity",
+            "contribution"
+          ]
+        },
+        {
+          "id": "f02_1_04",
+          "text": "Offering useful help and a warm welcome",
+          "valueIds": [
+            "service",
+            "hospitality"
+          ]
+        },
+        {
+          "id": "f02_1_05",
+          "text": "Giving people time and choosing to let go",
+          "valueIds": [
+            "forgiveness",
+            "patience"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "focus_02_2",
+      "stage": "focus",
+      "category": "Kindness & Care",
+      "question": "When someone is having a hard time, what matters most?",
+      "options": [
+        {
+          "id": "f02_2_01",
+          "text": "Being understanding rather than impatient",
+          "valueIds": [
+            "empathy",
+            "patience"
+          ]
+        },
+        {
+          "id": "f02_2_02",
+          "text": "Making them feel safe and welcome",
+          "valueIds": [
+            "hospitality",
+            "gentleness"
+          ]
+        },
+        {
+          "id": "f02_2_03",
+          "text": "Offering help freely without expecting a return",
+          "valueIds": [
+            "generosity",
+            "contribution"
+          ]
+        },
+        {
+          "id": "f02_2_04",
+          "text": "Choosing care even when I feel hurt",
+          "valueIds": [
+            "compassion",
+            "forgiveness"
+          ]
+        },
+        {
+          "id": "f02_2_05",
+          "text": "Helping someone with a small thoughtful gesture",
+          "valueIds": [
+            "kindness",
+            "service"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "focus_03_1",
+      "stage": "focus",
+      "category": "Integrity & Character",
+      "question": "What kind of person do you most want to be?",
+      "options": [
+        {
+          "id": "f03_1_01",
+          "text": "Someone truthful and genuine",
+          "valueIds": [
+            "honesty",
+            "sincerity"
+          ]
+        },
+        {
+          "id": "f03_1_02",
+          "text": "Someone who does what they believe is right",
+          "valueIds": [
+            "integrity",
+            "courage"
+          ]
+        },
+        {
+          "id": "f03_1_03",
+          "text": "Someone comfortable being themselves",
+          "valueIds": [
+            "authenticity",
+            "self-respect"
+          ]
+        },
+        {
+          "id": "f03_1_04",
+          "text": "Someone who owns their decisions",
+          "valueIds": [
+            "accountability",
+            "responsibility"
+          ]
+        },
+        {
+          "id": "f03_1_05",
+          "text": "Someone others can count on, without boasting",
+          "valueIds": [
+            "reliability",
+            "humility"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "focus_03_2",
+      "stage": "focus",
+      "category": "Integrity & Character",
+      "question": "Which choice would leave you feeling proud?",
+      "options": [
+        {
+          "id": "f03_2_01",
+          "text": "Telling the truth even when it is awkward",
+          "valueIds": [
+            "honesty",
+            "courage"
+          ]
+        },
+        {
+          "id": "f03_2_02",
+          "text": "Admitting a mistake and making it right",
+          "valueIds": [
+            "accountability",
+            "humility"
+          ]
+        },
+        {
+          "id": "f03_2_03",
+          "text": "Keeping a promise because it matters",
+          "valueIds": [
+            "reliability",
+            "responsibility"
+          ]
+        },
+        {
+          "id": "f03_2_04",
+          "text": "Living by my principles, not by approval",
+          "valueIds": [
+            "integrity",
+            "authenticity"
+          ]
+        },
+        {
+          "id": "f03_2_05",
+          "text": "Speaking sincerely while honoring my dignity",
+          "valueIds": [
+            "sincerity",
+            "self-respect"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "focus_04_1",
+      "stage": "focus",
+      "category": "Fairness & Community",
+      "question": "What matters most in the way people treat each other?",
+      "options": [
+        {
+          "id": "f04_1_01",
+          "text": "Fair treatment and protection from harm",
+          "valueIds": [
+            "fairness",
+            "justice"
+          ]
+        },
+        {
+          "id": "f04_1_02",
+          "text": "Equal dignity and attention to different needs",
+          "valueIds": [
+            "equality",
+            "equity"
+          ]
+        },
+        {
+          "id": "f04_1_03",
+          "text": "Respectful spaces where everyone is welcome",
+          "valueIds": [
+            "respect",
+            "inclusion"
+          ]
+        },
+        {
+          "id": "f04_1_04",
+          "text": "Standing together and working together",
+          "valueIds": [
+            "solidarity",
+            "cooperation"
+          ]
+        },
+        {
+          "id": "f04_1_05",
+          "text": "Civil disagreement and caring for community",
+          "valueIds": [
+            "civility",
+            "community"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "focus_04_2",
+      "stage": "focus",
+      "category": "Fairness & Community",
+      "question": "Which contribution to a group feels most worthwhile?",
+      "options": [
+        {
+          "id": "f04_2_01",
+          "text": "Making sure everyone is treated fairly",
+          "valueIds": [
+            "fairness",
+            "equity"
+          ]
+        },
+        {
+          "id": "f04_2_02",
+          "text": "Speaking up for equal human dignity",
+          "valueIds": [
+            "justice",
+            "equality"
+          ]
+        },
+        {
+          "id": "f04_2_03",
+          "text": "Inviting someone in and respecting their boundaries",
+          "valueIds": [
+            "inclusion",
+            "respect"
+          ]
+        },
+        {
+          "id": "f04_2_04",
+          "text": "Helping neighbors support each other",
+          "valueIds": [
+            "community",
+            "solidarity"
+          ]
+        },
+        {
+          "id": "f04_2_05",
+          "text": "Working through a disagreement respectfully",
+          "valueIds": [
+            "cooperation",
+            "civility"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "focus_05_1",
+      "stage": "focus",
+      "category": "Freedom & Agency",
+      "question": "What kind of freedom matters most to you?",
+      "options": [
+        {
+          "id": "f05_1_01",
+          "text": "Choosing my own direction and decisions",
+          "valueIds": [
+            "freedom",
+            "autonomy"
+          ]
+        },
+        {
+          "id": "f05_1_02",
+          "text": "Being able to act without waiting for permission",
+          "valueIds": [
+            "independence",
+            "agency"
+          ]
+        },
+        {
+          "id": "f05_1_03",
+          "text": "Setting a course true to who I am",
+          "valueIds": [
+            "self-direction",
+            "self-expression"
+          ]
+        },
+        {
+          "id": "f05_1_04",
+          "text": "Following an unplanned opportunity",
+          "valueIds": [
+            "spontaneity",
+            "adventure"
+          ]
+        },
+        {
+          "id": "f05_1_05",
+          "text": "Exploring beyond expectations and familiar places",
+          "valueIds": [
+            "exploration",
+            "nonconformity"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "focus_05_2",
+      "stage": "focus",
+      "category": "Freedom & Agency",
+      "question": "Which experience would feel most liberating?",
+      "options": [
+        {
+          "id": "f05_2_01",
+          "text": "Taking responsibility for my own choices",
+          "valueIds": [
+            "autonomy",
+            "agency"
+          ]
+        },
+        {
+          "id": "f05_2_02",
+          "text": "Living independently and deciding my direction",
+          "valueIds": [
+            "independence",
+            "self-direction"
+          ]
+        },
+        {
+          "id": "f05_2_03",
+          "text": "Trying an unfamiliar adventure on impulse",
+          "valueIds": [
+            "spontaneity",
+            "exploration"
+          ]
+        },
+        {
+          "id": "f05_2_04",
+          "text": "Showing the real me without fitting in",
+          "valueIds": [
+            "nonconformity",
+            "self-expression"
+          ]
+        },
+        {
+          "id": "f05_2_05",
+          "text": "Having room to live as I choose",
+          "valueIds": [
+            "freedom",
+            "adventure"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "focus_06_1",
+      "stage": "focus",
+      "category": "Learning & Growth",
+      "question": "What makes learning exciting to you?",
+      "options": [
+        {
+          "id": "f06_1_01",
+          "text": "Finding answers to unexpected questions",
+          "valueIds": [
+            "curiosity",
+            "understanding"
+          ]
+        },
+        {
+          "id": "f06_1_02",
+          "text": "Practicing a skill until I improve",
+          "valueIds": [
+            "learning",
+            "mastery"
+          ]
+        },
+        {
+          "id": "f06_1_03",
+          "text": "Seeing a problem with broader judgment",
+          "valueIds": [
+            "wisdom",
+            "discernment"
+          ]
+        },
+        {
+          "id": "f06_1_04",
+          "text": "Letting new perspectives change me",
+          "valueIds": [
+            "open-mindedness",
+            "growth"
+          ]
+        },
+        {
+          "id": "f06_1_05",
+          "text": "Looking back and feeling amazed",
+          "valueIds": [
+            "reflection",
+            "wonder"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "focus_06_2",
+      "stage": "focus",
+      "category": "Learning & Growth",
+      "question": "What kind of discovery stays with you?",
+      "options": [
+        {
+          "id": "f06_2_01",
+          "text": "A new idea that makes me curious",
+          "valueIds": [
+            "curiosity",
+            "wonder"
+          ]
+        },
+        {
+          "id": "f06_2_02",
+          "text": "New knowledge that changes how I understand things",
+          "valueIds": [
+            "learning",
+            "understanding"
+          ]
+        },
+        {
+          "id": "f06_2_03",
+          "text": "Looking back and seeing personal progress",
+          "valueIds": [
+            "reflection",
+            "growth"
+          ]
+        },
+        {
+          "id": "f06_2_04",
+          "text": "Considering another view with care",
+          "valueIds": [
+            "open-mindedness",
+            "wisdom"
+          ]
+        },
+        {
+          "id": "f06_2_05",
+          "text": "Getting better at choosing and doing skilled work",
+          "valueIds": [
+            "discernment",
+            "mastery"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "focus_07_1",
+      "stage": "focus",
+      "category": "Creativity & Expression",
+      "question": "What do you enjoy most about making things?",
+      "options": [
+        {
+          "id": "f07_1_01",
+          "text": "Inventing a fresh idea or possibility",
+          "valueIds": [
+            "creativity",
+            "inventiveness"
+          ]
+        },
+        {
+          "id": "f07_1_02",
+          "text": "Imagining and making something unique",
+          "valueIds": [
+            "imagination",
+            "originality"
+          ]
+        },
+        {
+          "id": "f07_1_03",
+          "text": "Putting meaning into art or a story",
+          "valueIds": [
+            "artistry",
+            "storytelling"
+          ]
+        },
+        {
+          "id": "f07_1_04",
+          "text": "Making something beautiful and well crafted",
+          "valueIds": [
+            "beauty",
+            "craftsmanship"
+          ]
+        },
+        {
+          "id": "f07_1_05",
+          "text": "Expressing myself freely and playfully",
+          "valueIds": [
+            "playfulness",
+            "expressiveness"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "focus_07_2",
+      "stage": "focus",
+      "category": "Creativity & Expression",
+      "question": "Which creative moment feels most rewarding?",
+      "options": [
+        {
+          "id": "f07_2_01",
+          "text": "Turning a wild possibility into something real",
+          "valueIds": [
+            "imagination",
+            "creativity"
+          ]
+        },
+        {
+          "id": "f07_2_02",
+          "text": "Finding an original solution to a problem",
+          "valueIds": [
+            "originality",
+            "inventiveness"
+          ]
+        },
+        {
+          "id": "f07_2_03",
+          "text": "Telling a story that expresses how I feel",
+          "valueIds": [
+            "storytelling",
+            "expressiveness"
+          ]
+        },
+        {
+          "id": "f07_2_04",
+          "text": "Making art whose details I genuinely care about",
+          "valueIds": [
+            "artistry",
+            "craftsmanship"
+          ]
+        },
+        {
+          "id": "f07_2_05",
+          "text": "Playing with colors, forms, and beautiful details",
+          "valueIds": [
+            "beauty",
+            "playfulness"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "focus_08_1",
+      "stage": "focus",
+      "category": "Wellbeing & Inner Life",
+      "question": "What does taking care of yourself look like?",
+      "options": [
+        {
+          "id": "f08_1_01",
+          "text": "Looking after my body and energy",
+          "valueIds": [
+            "health",
+            "vitality"
+          ]
+        },
+        {
+          "id": "f08_1_02",
+          "text": "Making space for different needs and rest",
+          "valueIds": [
+            "balance",
+            "rest"
+          ]
+        },
+        {
+          "id": "f08_1_03",
+          "text": "Feeling peaceful and steady",
+          "valueIds": [
+            "peace",
+            "calm"
+          ]
+        },
+        {
+          "id": "f08_1_04",
+          "text": "Noticing the present without rushing",
+          "valueIds": [
+            "mindfulness",
+            "acceptance"
+          ]
+        },
+        {
+          "id": "f08_1_05",
+          "text": "Being kind to myself and recovering after setbacks",
+          "valueIds": [
+            "self-compassion",
+            "resilience"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "focus_08_2",
+      "stage": "focus",
+      "category": "Wellbeing & Inner Life",
+      "question": "What helps you meet a difficult day?",
+      "options": [
+        {
+          "id": "f08_2_01",
+          "text": "Treating myself with patience and resting",
+          "valueIds": [
+            "self-compassion",
+            "rest"
+          ]
+        },
+        {
+          "id": "f08_2_02",
+          "text": "Staying calm while accepting what I cannot change",
+          "valueIds": [
+            "calm",
+            "acceptance"
+          ]
+        },
+        {
+          "id": "f08_2_03",
+          "text": "Finding balance so my wellbeing comes first",
+          "valueIds": [
+            "balance",
+            "health"
+          ]
+        },
+        {
+          "id": "f08_2_04",
+          "text": "Returning to the moment and beginning again",
+          "valueIds": [
+            "mindfulness",
+            "resilience"
+          ]
+        },
+        {
+          "id": "f08_2_05",
+          "text": "Keeping some peace and energy in my life",
+          "valueIds": [
+            "peace",
+            "vitality"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "focus_09_1",
+      "stage": "focus",
+      "category": "Joy & Appreciation",
+      "question": "Which experience brings you genuine delight?",
+      "options": [
+        {
+          "id": "f09_1_01",
+          "text": "Simply feeling glad and having fun",
+          "valueIds": [
+            "joy",
+            "fun"
+          ]
+        },
+        {
+          "id": "f09_1_02",
+          "text": "Noticing what I have and appreciating it",
+          "valueIds": [
+            "gratitude",
+            "appreciation"
+          ]
+        },
+        {
+          "id": "f09_1_03",
+          "text": "Sharing a laugh and celebrating",
+          "valueIds": [
+            "humor",
+            "celebration"
+          ]
+        },
+        {
+          "id": "f09_1_04",
+          "text": "Slowing down to enjoy a lovely moment",
+          "valueIds": [
+            "savoring",
+            "lightheartedness"
+          ]
+        },
+        {
+          "id": "f09_1_05",
+          "text": "Feeling amazed and energized by life",
+          "valueIds": [
+            "awe",
+            "enthusiasm"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "focus_09_2",
+      "stage": "focus",
+      "category": "Joy & Appreciation",
+      "question": "What would you like more of in ordinary days?",
+      "options": [
+        {
+          "id": "f09_2_01",
+          "text": "A little fun and laughter",
+          "valueIds": [
+            "fun",
+            "humor"
+          ]
+        },
+        {
+          "id": "f09_2_02",
+          "text": "A joyful moment I can really savor",
+          "valueIds": [
+            "joy",
+            "savoring"
+          ]
+        },
+        {
+          "id": "f09_2_03",
+          "text": "Pausing to appreciate something I am thankful for",
+          "valueIds": [
+            "gratitude",
+            "appreciation"
+          ]
+        },
+        {
+          "id": "f09_2_04",
+          "text": "Marking small wins with enthusiasm",
+          "valueIds": [
+            "celebration",
+            "enthusiasm"
+          ]
+        },
+        {
+          "id": "f09_2_05",
+          "text": "Taking life lightly and noticing something wondrous",
+          "valueIds": [
+            "lightheartedness",
+            "awe"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "focus_10_1",
+      "stage": "focus",
+      "category": "Purpose & Commitment",
+      "question": "What makes effort feel worthwhile to you?",
+      "options": [
+        {
+          "id": "f10_1_01",
+          "text": "Doing something connected to meaning",
+          "valueIds": [
+            "purpose",
+            "meaning"
+          ]
+        },
+        {
+          "id": "f10_1_02",
+          "text": "Staying with a meaningful commitment",
+          "valueIds": [
+            "dedication",
+            "perseverance"
+          ]
+        },
+        {
+          "id": "f10_1_03",
+          "text": "Building routines and showing up steadily",
+          "valueIds": [
+            "discipline",
+            "consistency"
+          ]
+        },
+        {
+          "id": "f10_1_04",
+          "text": "Doing careful, high-quality work",
+          "valueIds": [
+            "excellence",
+            "diligence"
+          ]
+        },
+        {
+          "id": "f10_1_05",
+          "text": "Taking initiative to care for what matters",
+          "valueIds": [
+            "initiative",
+            "stewardship"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "focus_10_2",
+      "stage": "focus",
+      "category": "Purpose & Commitment",
+      "question": "Which accomplishment would feel most satisfying?",
+      "options": [
+        {
+          "id": "f10_2_01",
+          "text": "Choosing a direction that feels meaningful",
+          "valueIds": [
+            "purpose",
+            "initiative"
+          ]
+        },
+        {
+          "id": "f10_2_02",
+          "text": "Sticking with something difficult because it matters",
+          "valueIds": [
+            "perseverance",
+            "meaning"
+          ]
+        },
+        {
+          "id": "f10_2_03",
+          "text": "Keeping a promise to practice and improve",
+          "valueIds": [
+            "dedication",
+            "discipline"
+          ]
+        },
+        {
+          "id": "f10_2_04",
+          "text": "Taking careful responsibility for quality",
+          "valueIds": [
+            "excellence",
+            "stewardship"
+          ]
+        },
+        {
+          "id": "f10_2_05",
+          "text": "Showing attentive effort over time",
+          "valueIds": [
+            "diligence",
+            "consistency"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "focus_11_1",
+      "stage": "focus",
+      "category": "Nature & World",
+      "question": "How do you want to relate to the natural world?",
+      "options": [
+        {
+          "id": "f11_1_01",
+          "text": "Spending meaningful time in nature",
+          "valueIds": [
+            "nature",
+            "outdoor-living"
+          ]
+        },
+        {
+          "id": "f11_1_02",
+          "text": "Living in a way future generations can sustain",
+          "valueIds": [
+            "sustainability",
+            "simplicity"
+          ]
+        },
+        {
+          "id": "f11_1_03",
+          "text": "Protecting ecosystems and wild places",
+          "valueIds": [
+            "conservation",
+            "environmental-care"
+          ]
+        },
+        {
+          "id": "f11_1_04",
+          "text": "Treating living beings with respect",
+          "valueIds": [
+            "reverence-for-life",
+            "care-for-animals"
+          ]
+        },
+        {
+          "id": "f11_1_05",
+          "text": "Living in balance with our connected world",
+          "valueIds": [
+            "harmony",
+            "interdependence"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "focus_11_2",
+      "stage": "focus",
+      "category": "Nature & World",
+      "question": "Which act would make you feel connected to the world?",
+      "options": [
+        {
+          "id": "f11_2_01",
+          "text": "Taking time outdoors with living things",
+          "valueIds": [
+            "outdoor-living",
+            "care-for-animals"
+          ]
+        },
+        {
+          "id": "f11_2_02",
+          "text": "Choosing to use fewer resources",
+          "valueIds": [
+            "simplicity",
+            "sustainability"
+          ]
+        },
+        {
+          "id": "f11_2_03",
+          "text": "Protecting nature through everyday choices",
+          "valueIds": [
+            "nature",
+            "environmental-care"
+          ]
+        },
+        {
+          "id": "f11_2_04",
+          "text": "Helping protect habitats and living beings",
+          "valueIds": [
+            "conservation",
+            "reverence-for-life"
+          ]
+        },
+        {
+          "id": "f11_2_05",
+          "text": "Recognizing our shared dependence and seeking harmony",
+          "valueIds": [
+            "interdependence",
+            "harmony"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "focus_12_1",
+      "stage": "focus",
+      "category": "Spirituality & Perspective",
+      "question": "Which deeper perspective matters most to you?",
+      "options": [
+        {
+          "id": "f12_1_01",
+          "text": "Keeping faith in what is possible",
+          "valueIds": [
+            "hope",
+            "faith"
+          ]
+        },
+        {
+          "id": "f12_1_02",
+          "text": "Exploring deeper meaning beyond myself",
+          "valueIds": [
+            "spirituality",
+            "transcendence"
+          ]
+        },
+        {
+          "id": "f12_1_03",
+          "text": "Making time for stillness and internal balance",
+          "valueIds": [
+            "contemplation",
+            "inner-harmony"
+          ]
+        },
+        {
+          "id": "f12_1_04",
+          "text": "Honoring sacred moments and connections",
+          "valueIds": [
+            "sacredness",
+            "interconnectedness"
+          ]
+        },
+        {
+          "id": "f12_1_05",
+          "text": "Staying open while carrying traditions forward",
+          "valueIds": [
+            "openness",
+            "tradition"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "focus_12_2",
+      "stage": "focus",
+      "category": "Spirituality & Perspective",
+      "question": "What helps you feel grounded in something larger?",
+      "options": [
+        {
+          "id": "f12_2_01",
+          "text": "Finding hope while trusting my convictions",
+          "valueIds": [
+            "hope",
+            "faith"
+          ]
+        },
+        {
+          "id": "f12_2_02",
+          "text": "Considering spiritual questions beyond myself",
+          "valueIds": [
+            "spirituality",
+            "transcendence"
+          ]
+        },
+        {
+          "id": "f12_2_03",
+          "text": "Contemplating how my values fit together",
+          "valueIds": [
+            "contemplation",
+            "inner-harmony"
+          ]
+        },
+        {
+          "id": "f12_2_04",
+          "text": "Honoring meaningful traditions and sacred things",
+          "valueIds": [
+            "tradition",
+            "sacredness"
+          ]
+        },
+        {
+          "id": "f12_2_05",
+          "text": "Feeling connected to life while remaining open",
+          "valueIds": [
+            "interconnectedness",
+            "openness"
+          ]
+        }
+      ]
+    }
+  ]
+}
