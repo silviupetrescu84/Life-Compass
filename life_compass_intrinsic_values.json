@@ -7,721 +7,2161 @@
       "id": "love",
       "name": "Love",
       "description": "Caring deeply for others and their wellbeing",
-      "category": "Love & Relationships"
+      "category": "Love & Relationships",
+      "actions": [
+        "Tell someone you love what you appreciate about them",
+        "Ask a loved one how they are really doing",
+        "Give someone your undivided attention",
+        "Offer help with a task they dislike",
+        "Share a warm memory with someone",
+        "Say \"I love you\" when you mean it",
+        "Plan a small thoughtful gesture",
+        "Listen without rushing to offer advice",
+        "Remember a detail that matters to them",
+        "Check in with someone you care about"
+      ]
     },
     {
       "id": "connection",
       "name": "Connection",
       "description": "Building meaningful bonds with people",
-      "category": "Love & Relationships"
+      "category": "Love & Relationships",
+      "actions": [
+        "Invite someone for a short walk",
+        "Ask a friend an open-ended question",
+        "Send a message to reconnect",
+        "Introduce yourself to someone new",
+        "Share something meaningful about your day",
+        "Join a conversation rather than observing",
+        "Ask someone about a shared interest",
+        "Make time for a phone call",
+        "Thank someone for spending time with you",
+        "Suggest doing an activity together"
+      ]
     },
     {
       "id": "friendship",
       "name": "Friendship",
       "description": "Nurturing mutual friendship and trust",
-      "category": "Love & Relationships"
+      "category": "Love & Relationships",
+      "actions": [
+        "Ask a friend what is new in their life",
+        "Make plans for a catch-up",
+        "Celebrate a friend's small win",
+        "Remember a friend's upcoming milestone",
+        "Send an inside joke to a friend",
+        "Offer support during a difficult week",
+        "Share a useful recommendation with a friend",
+        "Ask a friend for their perspective",
+        "Tell a friend what you value about them",
+        "Follow through on a plan you made"
+      ]
     },
     {
       "id": "intimacy",
       "name": "Intimacy",
       "description": "Sharing closeness and vulnerability",
-      "category": "Love & Relationships"
+      "category": "Love & Relationships",
+      "actions": [
+        "Share a feeling you have kept to yourself",
+        "Ask someone close what helps them feel understood",
+        "Have an honest conversation without distractions",
+        "Describe a hope you rarely talk about",
+        "Listen to a vulnerable disclosure without judging",
+        "Tell someone what makes you feel close",
+        "Ask for support with something personal",
+        "Share a meaningful childhood memory",
+        "Name a feeling instead of hiding it",
+        "Make space for a quiet conversation"
+      ]
     },
     {
       "id": "affection",
       "name": "Affection",
       "description": "Expressing warmth and fondness",
-      "category": "Love & Relationships"
+      "category": "Love & Relationships",
+      "actions": [
+        "Offer a hug when welcome",
+        "Write a warm note to someone",
+        "Give a sincere compliment",
+        "Hold hands if both people want to",
+        "Smile warmly when greeting someone",
+        "Use a caring tone in a difficult moment",
+        "Send a loving voice message",
+        "Make a comforting cup of tea for someone",
+        "Tell someone you missed them",
+        "Show warmth through a small thoughtful gesture"
+      ]
     },
     {
       "id": "belonging",
       "name": "Belonging",
       "description": "Being part of a community or group",
-      "category": "Love & Relationships"
+      "category": "Love & Relationships",
+      "actions": [
+        "Join a group activity you enjoy",
+        "Introduce yourself to another group member",
+        "Invite a newcomer into a conversation",
+        "Contribute an idea in a community meeting",
+        "Attend a local gathering",
+        "Wear or display something meaningful to your group",
+        "Check in with someone from your community",
+        "Offer to help at a group event",
+        "Learn someone's name in a group",
+        "Share a tradition that brings people together"
+      ]
     },
     {
       "id": "loyalty",
       "name": "Loyalty",
       "description": "Standing by people and commitments",
-      "category": "Love & Relationships"
+      "category": "Love & Relationships",
+      "actions": [
+        "Keep a promise you made to a friend",
+        "Defend someone who is being unfairly criticized",
+        "Check in with a friend going through difficulty",
+        "Keep someone's private story confidential",
+        "Show up for a commitment you made",
+        "Speak respectfully about absent friends",
+        "Remember to follow up on a friend's concern",
+        "Offer steady support without expecting praise",
+        "Be honest when you cannot keep a promise",
+        "Acknowledge the people who have supported you"
+      ]
     },
     {
       "id": "trust",
       "name": "Trust",
       "description": "Giving and earning confidence in others",
-      "category": "Love & Relationships"
+      "category": "Love & Relationships",
+      "actions": [
+        "Keep a small commitment today",
+        "Tell someone the truth kindly",
+        "Admit when you do not know something",
+        "Respect information shared in confidence",
+        "Ask before sharing someone else's news",
+        "Follow up when you say you will",
+        "Explain a change of plans promptly",
+        "Give someone room to make their own choice",
+        "Clarify an assumption instead of accusing",
+        "Be transparent about a mistake"
+      ]
     },
     {
       "id": "mutuality",
       "name": "Mutuality",
       "description": "Giving and receiving care in relationships",
-      "category": "Love & Relationships"
+      "category": "Love & Relationships",
+      "actions": [
+        "Ask what support someone needs",
+        "Say what support you need yourself",
+        "Take turns choosing a shared activity",
+        "Offer help without taking over",
+        "Accept help graciously when offered",
+        "Check whether a relationship feels reciprocal",
+        "Thank someone for their effort",
+        "Invite another person's preferences",
+        "Share responsibility for a shared task",
+        "Ask how you can make things easier for each other"
+      ]
     },
     {
       "id": "presence",
       "name": "Presence",
       "description": "Being fully there with another person",
-      "category": "Love & Relationships"
+      "category": "Love & Relationships",
+      "actions": [
+        "Put your phone away during a conversation",
+        "Make eye contact when comfortable",
+        "Listen to someone's full sentence",
+        "Notice the expression on a loved one's face",
+        "Ask a follow-up question and listen",
+        "Sit together without another screen",
+        "Pause before responding to someone",
+        "Pay attention during a shared meal",
+        "Notice when your mind wanders and return",
+        "Give someone five uninterrupted minutes"
+      ]
     },
     {
       "id": "kindness",
       "name": "Kindness",
       "description": "Treating people gently and thoughtfully",
-      "category": "Kindness & Care"
+      "category": "Kindness & Care",
+      "actions": [
+        "Hold a door for someone",
+        "Offer a genuine compliment",
+        "Help someone carry a small load",
+        "Let someone go ahead when appropriate",
+        "Send an encouraging message",
+        "Thank a person for their work",
+        "Ask if someone needs a hand",
+        "Use gentle words when correcting a mistake",
+        "Leave a thoughtful note",
+        "Do a small favor without expecting anything back"
+      ]
     },
     {
       "id": "compassion",
       "name": "Compassion",
       "description": "Responding to suffering with care",
-      "category": "Kindness & Care"
+      "category": "Kindness & Care",
+      "actions": [
+        "Ask someone struggling what would help",
+        "Listen without minimizing their feelings",
+        "Offer practical help to a person under stress",
+        "Be gentle with someone having a hard day",
+        "Check in after someone shares difficult news",
+        "Notice suffering rather than looking away",
+        "Give yourself permission to have a hard moment",
+        "Offer company without demanding an explanation",
+        "Avoid judging someone from one bad moment",
+        "Share a useful resource when welcome"
+      ]
     },
     {
       "id": "empathy",
       "name": "Empathy",
       "description": "Seeking to understand others' feelings",
-      "category": "Kindness & Care"
+      "category": "Kindness & Care",
+      "actions": [
+        "Ask someone how a situation felt for them",
+        "Repeat back what you heard before replying",
+        "Imagine why a person might see things differently",
+        "Listen before offering solutions",
+        "Ask what you might be missing",
+        "Notice another person's tone and context",
+        "Avoid assuming you know someone's intentions",
+        "Ask a clarifying question in a disagreement",
+        "Read an account from another perspective",
+        "Acknowledge someone's feelings even if you disagree"
+      ]
     },
     {
       "id": "generosity",
       "name": "Generosity",
       "description": "Giving freely of time, care, or resources",
-      "category": "Kindness & Care"
+      "category": "Kindness & Care",
+      "actions": [
+        "Give someone a few minutes of your time",
+        "Share a useful skill or tip",
+        "Offer an unused item to someone who needs it",
+        "Make a small donation within your means",
+        "Volunteer for a short helpful task",
+        "Share credit for a success",
+        "Introduce two people who could help each other",
+        "Cook a little extra to share",
+        "Offer encouragement freely",
+        "Help someone without asking for recognition"
+      ]
     },
     {
       "id": "service",
       "name": "Service",
       "description": "Helping others through useful action",
-      "category": "Kindness & Care"
+      "category": "Kindness & Care",
+      "actions": [
+        "Ask what useful task needs doing",
+        "Volunteer for a simple community activity",
+        "Help a neighbor with a practical problem",
+        "Share information that saves others time",
+        "Offer to tidy a shared space",
+        "Assist someone learning a skill",
+        "Pick up supplies for a person who needs help",
+        "Help organize a community resource",
+        "Do a necessary behind-the-scenes task",
+        "Ask for feedback on whether your help was useful"
+      ]
     },
     {
       "id": "contribution",
       "name": "Contribution",
       "description": "Making a positive difference",
-      "category": "Kindness & Care"
+      "category": "Kindness & Care",
+      "actions": [
+        "Share an idea that improves a shared project",
+        "Leave a communal space better than you found it",
+        "Teach someone something you know",
+        "Offer an hour to a cause you care about",
+        "Write constructive feedback for a community project",
+        "Help solve a problem in your neighborhood",
+        "Encourage someone pursuing a meaningful goal",
+        "Create a useful resource for others",
+        "Support a local initiative",
+        "Ask how your skills could benefit others"
+      ]
     },
     {
       "id": "hospitality",
       "name": "Hospitality",
       "description": "Making others feel welcome and comfortable",
-      "category": "Kindness & Care"
+      "category": "Kindness & Care",
+      "actions": [
+        "Offer a visitor a drink",
+        "Make space for someone to sit comfortably",
+        "Ask a guest about their preferences",
+        "Invite someone to share a meal",
+        "Help a newcomer feel included",
+        "Prepare a simple welcoming space",
+        "Introduce guests who have not met",
+        "Offer clear directions to a visitor",
+        "Check that everyone has what they need",
+        "Thank someone for visiting"
+      ]
     },
     {
       "id": "forgiveness",
       "name": "Forgiveness",
       "description": "Letting go of resentment when possible",
-      "category": "Kindness & Care"
+      "category": "Kindness & Care",
+      "actions": [
+        "Write down a resentment you want to release",
+        "Consider the difference between harm and intent",
+        "Name what hurt you without exaggeration",
+        "Reflect on what an apology would mean",
+        "Let go of replaying one minor irritation",
+        "Offer a sincere apology for your part",
+        "Choose not to retaliate over a small slight",
+        "Practice a kinder interpretation when warranted",
+        "Decide on a boundary that helps you move on",
+        "Release one expectation you cannot control"
+      ]
     },
     {
       "id": "patience",
       "name": "Patience",
       "description": "Allowing others and situations time",
-      "category": "Kindness & Care"
+      "category": "Kindness & Care",
+      "actions": [
+        "Wait through a pause without interrupting",
+        "Take three breaths before responding",
+        "Allow extra time for a slow task",
+        "Listen while someone finds their words",
+        "Choose a calmer response to a delay",
+        "Practice a skill without rushing results",
+        "Let someone finish at their pace",
+        "Notice the urge to hurry others",
+        "Give yourself time to learn something new",
+        "Respond to one inconvenience with patience"
+      ]
     },
     {
       "id": "gentleness",
       "name": "Gentleness",
       "description": "Acting with softness rather than harshness",
-      "category": "Kindness & Care"
+      "category": "Kindness & Care",
+      "actions": [
+        "Soften your tone in a tense conversation",
+        "Handle a fragile object with care",
+        "Offer feedback without harsh language",
+        "Move slowly through a stressful task",
+        "Speak kindly to yourself after a mistake",
+        "Ask a question instead of making an accusation",
+        "Give someone space to feel upset",
+        "Choose a gentle way to set a boundary",
+        "Pause before using sharp words",
+        "Offer reassurance without dismissing concerns"
+      ]
     },
     {
       "id": "honesty",
       "name": "Honesty",
       "description": "Speaking and acting truthfully",
-      "category": "Integrity & Character"
+      "category": "Integrity & Character",
+      "actions": [
+        "Give a truthful answer to a simple question",
+        "Admit when you are unsure",
+        "Correct a small inaccurate statement",
+        "Express your real preference politely",
+        "Tell someone when a plan will not work",
+        "Acknowledge a mistake without excuses",
+        "Share relevant information you had omitted",
+        "Avoid exaggerating an achievement",
+        "State your limits clearly",
+        "Check that your words match what you mean"
+      ]
     },
     {
       "id": "integrity",
       "name": "Integrity",
       "description": "Acting consistently with your principles",
-      "category": "Integrity & Character"
+      "category": "Integrity & Character",
+      "actions": [
+        "Keep a commitment when nobody is watching",
+        "Act on a principle you believe in",
+        "Decline something that conflicts with your values",
+        "Explain the reason behind a difficult choice",
+        "Return something that is not yours",
+        "Give credit to the right person",
+        "Speak up about a small unfairness",
+        "Choose consistency over convenience",
+        "Reflect on a decision that felt misaligned",
+        "Make amends for a choice you regret"
+      ]
     },
     {
       "id": "authenticity",
       "name": "Authenticity",
       "description": "Expressing who you genuinely are",
-      "category": "Integrity & Character"
+      "category": "Integrity & Character",
+      "actions": [
+        "Say what you genuinely enjoy",
+        "Share an opinion respectfully",
+        "Wear something that feels like you",
+        "Choose an activity you actually want to do",
+        "Name a preference instead of agreeing automatically",
+        "Write about what feels most like you",
+        "Tell someone a true story about yourself",
+        "Stop pretending to like something harmless",
+        "Ask for what you need directly",
+        "Allow yourself to be a beginner"
+      ]
     },
     {
       "id": "sincerity",
       "name": "Sincerity",
       "description": "Being genuine in words and intentions",
-      "category": "Integrity & Character"
+      "category": "Integrity & Character",
+      "actions": [
+        "Give a compliment you truly mean",
+        "Thank someone with specific details",
+        "Say what you mean without flattery",
+        "Offer an apology without defensiveness",
+        "Make a promise only if you intend to keep it",
+        "Tell someone why you appreciate their help",
+        "Ask a question you genuinely want answered",
+        "Explain your intention honestly",
+        "Avoid saying yes just to please someone",
+        "Write a note in your own words"
+      ]
     },
     {
       "id": "accountability",
       "name": "Accountability",
       "description": "Owning your actions and their effects",
-      "category": "Integrity & Character"
+      "category": "Integrity & Character",
+      "actions": [
+        "Name one mistake without blaming others",
+        "Tell someone how you will correct an error",
+        "Follow through on a promised fix",
+        "Reflect on the impact of your actions",
+        "Invite feedback on something you did",
+        "Apologize for a specific behavior",
+        "Check whether a correction worked",
+        "Acknowledge your part in a disagreement",
+        "Update someone about a missed commitment",
+        "Take one concrete step to make things right"
+      ]
     },
     {
       "id": "responsibility",
       "name": "Responsibility",
       "description": "Taking care of what is yours to do",
-      "category": "Integrity & Character"
+      "category": "Integrity & Character",
+      "actions": [
+        "Finish a task you agreed to do",
+        "Pay attention to an upcoming obligation",
+        "Handle a small repair or maintenance task",
+        "Respond to an important pending message",
+        "Prepare for something you committed to",
+        "Put away something you used",
+        "Check on someone depending on you",
+        "Clarify ownership of a shared task",
+        "Set a realistic reminder for an obligation",
+        "Do a necessary task before it becomes urgent"
+      ]
     },
     {
       "id": "reliability",
       "name": "Reliability",
       "description": "Doing what you say you will do",
-      "category": "Integrity & Character"
+      "category": "Integrity & Character",
+      "actions": [
+        "Arrive on time for an appointment",
+        "Confirm a plan you made",
+        "Complete one promised small task",
+        "Tell someone early if you will be late",
+        "Write down a commitment you made",
+        "Send an update when plans change",
+        "Return something you borrowed",
+        "Keep a deadline you agreed to",
+        "Check the details before handing over work",
+        "Avoid promising more than you can do"
+      ]
     },
     {
       "id": "humility",
       "name": "Humility",
       "description": "Recognizing your limits without self-dismissal",
-      "category": "Integrity & Character"
+      "category": "Integrity & Character",
+      "actions": [
+        "Admit that another person knows more",
+        "Ask for advice about something unfamiliar",
+        "Thank someone who corrected you",
+        "Share credit for a team success",
+        "Listen to criticism without interrupting",
+        "Acknowledge a skill you are still learning",
+        "Ask a beginner's question without embarrassment",
+        "Change your mind when evidence warrants it",
+        "Notice one assumption you made",
+        "Celebrate someone else's expertise"
+      ]
     },
     {
       "id": "courage",
       "name": "Courage",
       "description": "Acting on what matters despite fear",
-      "category": "Integrity & Character"
+      "category": "Integrity & Character",
+      "actions": [
+        "Start a conversation you have avoided",
+        "Try a skill you are nervous about",
+        "Share an idea despite uncertainty",
+        "Set a respectful boundary",
+        "Ask a question in a group",
+        "Apply for an opportunity that matters",
+        "Admit a difficult truth kindly",
+        "Take one step toward a meaningful challenge",
+        "Speak up when someone is excluded",
+        "Ask for help even if it feels uncomfortable"
+      ]
     },
     {
       "id": "self-respect",
       "name": "Self-respect",
       "description": "Treating yourself with dignity",
-      "category": "Integrity & Character"
+      "category": "Integrity & Character",
+      "actions": [
+        "Say no to a request you cannot take on",
+        "Speak to yourself without insults",
+        "Take a break when you need one",
+        "Express a personal boundary clearly",
+        "Choose not to join a demeaning conversation",
+        "Ask for fair treatment respectfully",
+        "Make time for a basic need",
+        "Recognize one thing you handled well",
+        "Walk away from a disrespectful exchange",
+        "Keep a small promise to yourself"
+      ]
     },
     {
       "id": "fairness",
       "name": "Fairness",
       "description": "Treating people according to just standards",
-      "category": "Fairness & Community"
+      "category": "Fairness & Community",
+      "actions": [
+        "Hear both sides before making a judgment",
+        "Share a resource evenly when appropriate",
+        "Notice whose contribution was overlooked",
+        "Explain a decision using consistent criteria",
+        "Challenge a double standard respectfully",
+        "Give equal time for people to speak",
+        "Check your assumptions about a stranger",
+        "Acknowledge an unfair advantage",
+        "Offer an opportunity fairly",
+        "Correct an unequal rule you can influence"
+      ]
     },
     {
       "id": "justice",
       "name": "Justice",
       "description": "Standing against harm and unfairness",
-      "category": "Fairness & Community"
+      "category": "Fairness & Community",
+      "actions": [
+        "Learn about a local issue affecting others",
+        "Support a credible community advocacy group",
+        "Speak up about unfair treatment",
+        "Write to a representative about an issue",
+        "Share a reliable source about an injustice",
+        "Listen to someone affected by a policy",
+        "Volunteer for a relevant cause",
+        "Challenge harmful language respectfully",
+        "Ask how a rule affects vulnerable people",
+        "Support a fair resolution to a conflict"
+      ]
     },
     {
       "id": "equality",
       "name": "Equality",
       "description": "Recognizing equal human worth",
-      "category": "Fairness & Community"
+      "category": "Fairness & Community",
+      "actions": [
+        "Invite equal participation in a discussion",
+        "Avoid assuming someone's ability from their identity",
+        "Share speaking time in a meeting",
+        "Notice unequal treatment and question it",
+        "Use inclusive language where appropriate",
+        "Treat service workers with equal dignity",
+        "Ask whether a process applies fairly to everyone",
+        "Listen to someone with less influence",
+        "Offer the same courtesy to everyone",
+        "Give equal recognition for equal contributions"
+      ]
     },
     {
       "id": "equity",
       "name": "Equity",
       "description": "Responding to different needs fairly",
-      "category": "Fairness & Community"
+      "category": "Fairness & Community",
+      "actions": [
+        "Ask whether someone needs an accommodation",
+        "Offer flexible ways to participate",
+        "Notice who faces an extra barrier",
+        "Adjust help to someone's actual needs",
+        "Invite feedback on accessibility",
+        "Choose a more accessible meeting location",
+        "Share information in an easy-to-use format",
+        "Check whether a rule disadvantages someone",
+        "Support a practical accessibility improvement",
+        "Give people different forms of support fairly"
+      ]
     },
     {
       "id": "respect",
       "name": "Respect",
       "description": "Honoring others' dignity and boundaries",
-      "category": "Fairness & Community"
+      "category": "Fairness & Community",
+      "actions": [
+        "Ask before touching someone's belongings",
+        "Listen without interrupting",
+        "Honor a stated boundary",
+        "Use someone's preferred name",
+        "Disagree without insults",
+        "Give others room to make choices",
+        "Avoid sharing private details",
+        "Acknowledge a person's time",
+        "Ask permission before offering advice",
+        "Treat a stranger with courtesy"
+      ]
     },
     {
       "id": "inclusion",
       "name": "Inclusion",
       "description": "Making room for different people",
-      "category": "Fairness & Community"
+      "category": "Fairness & Community",
+      "actions": [
+        "Invite a quiet person into a conversation",
+        "Explain an inside joke to a newcomer",
+        "Check if everyone can access an activity",
+        "Use language that welcomes different backgrounds",
+        "Ask whose perspective is missing",
+        "Invite someone who is often left out",
+        "Make an introduction at a gathering",
+        "Offer an alternative way to participate",
+        "Listen to a person with a different experience",
+        "Help a newcomer understand group routines"
+      ]
     },
     {
       "id": "solidarity",
       "name": "Solidarity",
       "description": "Standing together through difficulty",
-      "category": "Fairness & Community"
+      "category": "Fairness & Community",
+      "actions": [
+        "Check in with someone facing a setback",
+        "Show up for a community initiative",
+        "Offer practical support to an affected group",
+        "Share trustworthy information about a cause",
+        "Stand beside someone treated unfairly",
+        "Ask what kind of support is actually useful",
+        "Join a group effort to solve a problem",
+        "Recognize a struggle without making it about you",
+        "Offer help consistently rather than only publicly",
+        "Support someone speaking up about a concern"
+      ]
     },
     {
       "id": "cooperation",
       "name": "Cooperation",
       "description": "Working together toward shared aims",
-      "category": "Fairness & Community"
+      "category": "Fairness & Community",
+      "actions": [
+        "Ask teammates what would help them",
+        "Offer to handle one part of a shared task",
+        "Clarify a common goal before starting",
+        "Share useful information early",
+        "Agree on roles for a group activity",
+        "Invite ideas from everyone involved",
+        "Resolve a small misunderstanding directly",
+        "Help another person finish their part",
+        "Celebrate a joint result",
+        "Look for a compromise that serves the shared aim"
+      ]
     },
     {
       "id": "civility",
       "name": "Civility",
       "description": "Disagreeing without cruelty",
-      "category": "Fairness & Community"
+      "category": "Fairness & Community",
+      "actions": [
+        "Disagree without raising your voice",
+        "Ask what someone means before replying",
+        "Avoid name-calling in a discussion",
+        "Let another person finish speaking",
+        "Acknowledge a point you agree with",
+        "Pause before posting an angry comment",
+        "Use respectful words during conflict",
+        "Choose curiosity over sarcasm",
+        "End an unproductive argument politely",
+        "Thank someone for a thoughtful disagreement"
+      ]
     },
     {
       "id": "community",
       "name": "Community",
       "description": "Nurturing shared life and mutual support",
-      "category": "Fairness & Community"
+      "category": "Fairness & Community",
+      "actions": [
+        "Attend a neighborhood event",
+        "Introduce yourself to a neighbor",
+        "Support a local community project",
+        "Help tidy a shared area",
+        "Share a useful local resource",
+        "Offer to volunteer at a gathering",
+        "Visit a local independent venue",
+        "Invite someone to a group activity",
+        "Ask about a community need",
+        "Thank someone maintaining a shared space"
+      ]
     },
     {
       "id": "freedom",
       "name": "Freedom",
       "description": "Choosing how to live within real constraints",
-      "category": "Freedom & Agency"
+      "category": "Freedom & Agency",
+      "actions": [
+        "Make one choice based on your priorities",
+        "Decline an optional commitment that feels wrong",
+        "Spend free time on something you choose",
+        "Question a rule that no longer serves you",
+        "Explore a different way of doing a task",
+        "Plan a small independent outing",
+        "Create space for an unstructured hour",
+        "Express a preference respectfully",
+        "Notice where you can make a meaningful choice",
+        "Choose a personal goal rather than an imposed one"
+      ]
     },
     {
       "id": "autonomy",
       "name": "Autonomy",
       "description": "Making choices guided by your own judgment",
-      "category": "Freedom & Agency"
+      "category": "Freedom & Agency",
+      "actions": [
+        "Make a decision after considering your own reasons",
+        "Set a personal boundary",
+        "Choose how to approach a task",
+        "Write down your priorities before deciding",
+        "Ask for information instead of permission",
+        "Decide what advice to accept",
+        "Plan an activity independently",
+        "Take ownership of a small decision",
+        "Review whether a commitment reflects your wishes",
+        "Explain your choice calmly"
+      ]
     },
     {
       "id": "independence",
       "name": "Independence",
       "description": "Being able to act on your own initiative",
-      "category": "Freedom & Agency"
+      "category": "Freedom & Agency",
+      "actions": [
+        "Handle a simple errand on your own",
+        "Learn to solve a small practical problem",
+        "Make a plan without relying on others",
+        "Research an unfamiliar task yourself",
+        "Try a new route independently",
+        "Organize one area of your finances",
+        "Practice a useful everyday skill",
+        "Complete a task without unnecessary reassurance",
+        "Prepare what you need for tomorrow",
+        "Ask for help only after trying a safe first step"
+      ]
     },
     {
       "id": "self-direction",
       "name": "Self-direction",
       "description": "Setting your own meaningful direction",
-      "category": "Freedom & Agency"
+      "category": "Freedom & Agency",
+      "actions": [
+        "Write one thing you want to pursue",
+        "Choose your next meaningful step",
+        "Set aside time for a personal project",
+        "Review whether your plans reflect your priorities",
+        "Make a small plan for a self-chosen goal",
+        "Remove one task that no longer fits your direction",
+        "Set your own measure of progress",
+        "Choose an activity without outside pressure",
+        "Reflect on where you want to grow",
+        "Take one action that moves you forward"
+      ]
     },
     {
       "id": "agency",
       "name": "Agency",
       "description": "Taking an active role in shaping your life",
-      "category": "Freedom & Agency"
+      "category": "Freedom & Agency",
+      "actions": [
+        "Identify one thing you can influence",
+        "Take the first step on a stalled task",
+        "Ask for a change you would find helpful",
+        "Make a small decision you have postponed",
+        "Replace one complaint with a practical action",
+        "Choose how to respond to an inconvenience",
+        "Set up a resource that makes action easier",
+        "Speak up about a need",
+        "Create a plan for one controllable next step",
+        "Notice a choice you still have"
+      ]
     },
     {
       "id": "spontaneity",
       "name": "Spontaneity",
       "description": "Welcoming unplanned moments",
-      "category": "Freedom & Agency"
+      "category": "Freedom & Agency",
+      "actions": [
+        "Take a different route on a walk",
+        "Accept a safe last-minute invitation",
+        "Try a cafe you have not visited",
+        "Choose a new activity without overplanning",
+        "Call a friend unexpectedly at a suitable time",
+        "Spend ten minutes following a harmless impulse",
+        "Pick a random book to sample",
+        "Explore a nearby street you do not know",
+        "Try a new food on a whim",
+        "Let a free moment remain unplanned"
+      ]
     },
     {
       "id": "adventure",
       "name": "Adventure",
       "description": "Embracing worthwhile new experiences",
-      "category": "Freedom & Agency"
+      "category": "Freedom & Agency",
+      "actions": [
+        "Try a new outdoor activity safely",
+        "Explore an unfamiliar neighborhood",
+        "Plan a short trip somewhere new",
+        "Take a different hiking trail",
+        "Visit a place you have never been",
+        "Try a beginner class in something unusual",
+        "Say yes to a manageable new experience",
+        "Explore a new city map",
+        "Invite someone on a mini adventure",
+        "Do one safe thing outside your routine"
+      ]
     },
     {
       "id": "exploration",
       "name": "Exploration",
       "description": "Venturing beyond what is familiar",
-      "category": "Freedom & Agency"
+      "category": "Freedom & Agency",
+      "actions": [
+        "Visit an unfamiliar part of town",
+        "Look up a place you have wondered about",
+        "Try an activity you have never attempted",
+        "Walk down a new street",
+        "Explore a new topic for ten minutes",
+        "Visit a museum section you usually skip",
+        "Choose a new genre of book or music",
+        "Ask someone about a culture unfamiliar to you",
+        "Sample a new hobby",
+        "Explore a public trail you have not tried"
+      ]
     },
     {
       "id": "nonconformity",
       "name": "Nonconformity",
       "description": "Thinking beyond social expectations",
-      "category": "Freedom & Agency"
+      "category": "Freedom & Agency",
+      "actions": [
+        "Question a norm you usually follow automatically",
+        "Express an unconventional idea respectfully",
+        "Wear something you like despite trends",
+        "Try a different solution to a familiar problem",
+        "Choose a hobby outside expectations",
+        "Notice when you are copying others",
+        "Say no to a trend that does not suit you",
+        "Read a thoughtful dissenting view",
+        "Make a choice based on your own principles",
+        "Share a creative alternative in a group"
+      ]
     },
     {
       "id": "self-expression",
       "name": "Self-expression",
       "description": "Sharing your individuality openly",
-      "category": "Freedom & Agency"
+      "category": "Freedom & Agency",
+      "actions": [
+        "Share a personal opinion kindly",
+        "Choose clothes that reflect your taste",
+        "Create a short piece of writing",
+        "Make a playlist that reflects your mood",
+        "Tell someone what inspires you",
+        "Draw or photograph how you feel",
+        "Customize a personal space",
+        "Speak up about a genuine preference",
+        "Share an idea in your own style",
+        "Create something without trying to impress"
+      ]
     },
     {
       "id": "curiosity",
       "name": "Curiosity",
       "description": "Wanting to explore and understand",
-      "category": "Learning & Growth"
+      "category": "Learning & Growth",
+      "actions": [
+        "Ask one question you genuinely wonder about",
+        "Read a short article on an unfamiliar topic",
+        "Look up how an everyday object works",
+        "Ask someone why they enjoy their hobby",
+        "Explore a word you do not know",
+        "Watch a brief educational demonstration",
+        "Test a small harmless hypothesis",
+        "Visit a new section of a library",
+        "Follow a question through two sources",
+        "Write down three things you want to understand"
+      ]
     },
     {
       "id": "learning",
       "name": "Learning",
       "description": "Seeking new knowledge and skills",
-      "category": "Learning & Growth"
+      "category": "Learning & Growth",
+      "actions": [
+        "Read one page of an educational book",
+        "Practice a new word in another language",
+        "Try a short tutorial",
+        "Take notes on a concept you just learned",
+        "Ask for an explanation of something confusing",
+        "Review one skill you are developing",
+        "Listen to an educational podcast segment",
+        "Solve a practice problem",
+        "Summarize a new idea in your own words",
+        "Teach someone one thing you learned"
+      ]
     },
     {
       "id": "wisdom",
       "name": "Wisdom",
       "description": "Using understanding with sound judgment",
-      "category": "Learning & Growth"
+      "category": "Learning & Growth",
+      "actions": [
+        "Pause before making an important judgment",
+        "Ask what the long-term consequence might be",
+        "Seek advice from someone experienced",
+        "Consider two sides of a difficult choice",
+        "Reflect on a past mistake and its lesson",
+        "Separate facts from assumptions",
+        "Think about who a decision will affect",
+        "Read a short passage from a thoughtful author",
+        "Choose a response you will respect later",
+        "Revisit a belief that deserves reflection"
+      ]
     },
     {
       "id": "understanding",
       "name": "Understanding",
       "description": "Seeking deeper clarity about things",
-      "category": "Learning & Growth"
+      "category": "Learning & Growth",
+      "actions": [
+        "Ask a clarifying question",
+        "Explain a concept in your own words",
+        "Read two perspectives on a topic",
+        "Identify what you still do not understand",
+        "Draw a simple diagram of a complex idea",
+        "Ask someone to show you how something works",
+        "Look up a term you hear often",
+        "Summarize an argument fairly",
+        "Check the source of a confusing claim",
+        "Connect a new idea to something you know"
+      ]
     },
     {
       "id": "open-mindedness",
       "name": "Open-mindedness",
       "description": "Considering views beyond your own",
-      "category": "Learning & Growth"
+      "category": "Learning & Growth",
+      "actions": [
+        "Listen to an opinion you disagree with",
+        "Ask what evidence might change your view",
+        "Read a thoughtful opposing perspective",
+        "Name an assumption you could be wrong about",
+        "Invite feedback without defending immediately",
+        "Try an unfamiliar cultural experience",
+        "Ask why someone sees things differently",
+        "Reconsider a judgment after new information",
+        "Notice a stereotype you have learned",
+        "Say \"I might be wrong\" when appropriate"
+      ]
     },
     {
       "id": "growth",
       "name": "Growth",
       "description": "Continuing to develop as a person",
-      "category": "Learning & Growth"
+      "category": "Learning & Growth",
+      "actions": [
+        "Choose one skill to improve",
+        "Practice something slightly challenging",
+        "Ask for useful feedback",
+        "Reflect on a lesson from a setback",
+        "Try a better method for a familiar task",
+        "Read about a topic that stretches you",
+        "Take a first step toward a long-term aim",
+        "Notice one way your perspective has changed",
+        "Set a small learning goal",
+        "Review what you can do now that you could not before"
+      ]
     },
     {
       "id": "mastery",
       "name": "Mastery",
       "description": "Deepening skill through dedicated practice",
-      "category": "Learning & Growth"
+      "category": "Learning & Growth",
+      "actions": [
+        "Practice one specific skill for ten minutes",
+        "Identify a technique to refine",
+        "Ask an experienced person for feedback",
+        "Repeat a difficult movement carefully",
+        "Study an example of excellent work",
+        "Break a complex skill into smaller parts",
+        "Compare your latest attempt with an earlier one",
+        "Focus on accuracy before speed",
+        "Write down one lesson from practice",
+        "Try a slightly harder exercise"
+      ]
     },
     {
       "id": "discernment",
       "name": "Discernment",
       "description": "Distinguishing what matters from what does not",
-      "category": "Learning & Growth"
+      "category": "Learning & Growth",
+      "actions": [
+        "Separate important from urgent tasks",
+        "Ask whether a claim is supported by evidence",
+        "Compare two options against your priorities",
+        "Notice a distraction masquerading as a priority",
+        "Pause before sharing uncertain information",
+        "Identify the main point in a long article",
+        "Ask what information is actually needed",
+        "Remove one low-value task from a plan",
+        "Look for a hidden assumption",
+        "Choose one thing that truly deserves attention"
+      ]
     },
     {
       "id": "reflection",
       "name": "Reflection",
       "description": "Examining experiences to learn from them",
-      "category": "Learning & Growth"
+      "category": "Learning & Growth",
+      "actions": [
+        "Write three lines about your day",
+        "Ask what surprised you recently",
+        "Identify a choice you would repeat",
+        "Think about a recent emotional reaction",
+        "Record one lesson from an experience",
+        "Notice what gave you energy today",
+        "Review a decision without judging yourself",
+        "Ask how your behavior matched your values",
+        "Spend five quiet minutes thinking",
+        "Write down a question worth revisiting"
+      ]
     },
     {
       "id": "wonder",
       "name": "Wonder",
       "description": "Remaining open to amazement and mystery",
-      "category": "Learning & Growth"
+      "category": "Learning & Growth",
+      "actions": [
+        "Look closely at something in nature",
+        "Read about an unusual natural phenomenon",
+        "Observe the sky for a few minutes",
+        "Visit an unfamiliar exhibit",
+        "Ask a child what they find fascinating",
+        "Explore a surprising scientific fact",
+        "Notice an intricate pattern nearby",
+        "Listen to a piece of music with full attention",
+        "Look at a photo of a distant landscape",
+        "Write down something that amazed you"
+      ]
     },
     {
       "id": "creativity",
       "name": "Creativity",
       "description": "Bringing new ideas or forms into being",
-      "category": "Creativity & Expression"
+      "category": "Creativity & Expression",
+      "actions": [
+        "Sketch an idea for five minutes",
+        "Combine two unrelated ideas",
+        "Write a short original paragraph",
+        "Make something using materials at hand",
+        "Try a new way to solve a small problem",
+        "Create a simple visual design",
+        "Brainstorm five unusual possibilities",
+        "Change one element of a familiar recipe",
+        "Capture an interesting photo",
+        "Build a tiny prototype"
+      ]
     },
     {
       "id": "imagination",
       "name": "Imagination",
       "description": "Exploring possibilities in your mind",
-      "category": "Creativity & Expression"
+      "category": "Creativity & Expression",
+      "actions": [
+        "Invent a character in two sentences",
+        "Imagine three different endings to a story",
+        "Picture a place that does not exist",
+        "Describe a future you would enjoy",
+        "Turn an ordinary object into a story prompt",
+        "Draw an imaginary creature",
+        "Ask \"what if\" about a familiar situation",
+        "Make up a playful explanation for a mystery",
+        "Visualize a new kind of invention",
+        "Invent a short scene in your mind"
+      ]
     },
     {
       "id": "originality",
       "name": "Originality",
       "description": "Making something distinctly your own",
-      "category": "Creativity & Expression"
+      "category": "Creativity & Expression",
+      "actions": [
+        "Try an approach that feels distinctly yours",
+        "Write a personal take on a familiar topic",
+        "Redesign an everyday object on paper",
+        "Create without copying a reference",
+        "Combine influences in an unexpected way",
+        "Choose a unique solution to a small challenge",
+        "Make an original greeting card",
+        "Develop a personal style for a project",
+        "Question a conventional format",
+        "Share one idea you have not heard elsewhere"
+      ]
     },
     {
       "id": "artistry",
       "name": "Artistry",
       "description": "Expressing meaning through art or craft",
-      "category": "Creativity & Expression"
+      "category": "Creativity & Expression",
+      "actions": [
+        "Spend ten minutes drawing or painting",
+        "Practice a musical phrase",
+        "Experiment with color combinations",
+        "Visit a local art display",
+        "Create a small collage",
+        "Study a work of art you admire",
+        "Write a few lines of poetry",
+        "Try a new artistic technique",
+        "Photograph an interesting composition",
+        "Finish a small creative piece"
+      ]
     },
     {
       "id": "beauty",
       "name": "Beauty",
       "description": "Noticing and creating what feels beautiful",
-      "category": "Creativity & Expression"
+      "category": "Creativity & Expression",
+      "actions": [
+        "Notice the light in a room",
+        "Arrange a simple attractive space",
+        "Look closely at a flower or leaf",
+        "Listen to beautiful music intentionally",
+        "Photograph a pleasing detail",
+        "Wear something you find beautiful",
+        "Visit an inspiring public space",
+        "Choose a color combination you love",
+        "Appreciate the design of an everyday object",
+        "Make a small corner of your home inviting"
+      ]
     },
     {
       "id": "playfulness",
       "name": "Playfulness",
       "description": "Approaching life with imaginative play",
-      "category": "Creativity & Expression"
+      "category": "Creativity & Expression",
+      "actions": [
+        "Invent a silly game with a friend",
+        "Try a playful creative challenge",
+        "Make up a funny story",
+        "Doodle without a goal",
+        "Approach a routine task like a game",
+        "Play a quick word game",
+        "Try an improvisation exercise",
+        "Use a playful voice with someone receptive",
+        "Build something just for fun",
+        "Allow yourself to be delightfully imperfect"
+      ]
     },
     {
       "id": "inventiveness",
       "name": "Inventiveness",
       "description": "Finding novel possibilities and solutions",
-      "category": "Creativity & Expression"
+      "category": "Creativity & Expression",
+      "actions": [
+        "List three solutions to a small problem",
+        "Repurpose an everyday item safely",
+        "Design a shortcut for a repeated task",
+        "Sketch a simple gadget idea",
+        "Combine two useful features in a new way",
+        "Prototype a solution using paper",
+        "Ask how a tool could work differently",
+        "Improve one tiny part of a workflow",
+        "Experiment with an alternative technique",
+        "Share a practical invention idea"
+      ]
     },
     {
       "id": "storytelling",
       "name": "Storytelling",
       "description": "Sharing meaning through stories",
-      "category": "Creativity & Expression"
+      "category": "Creativity & Expression",
+      "actions": [
+        "Tell a friend a meaningful short story",
+        "Write a scene from an ordinary day",
+        "Describe a memory with sensory details",
+        "Record a family story with permission",
+        "Invent an opening line",
+        "Retell an event from another viewpoint",
+        "Write a six-sentence story",
+        "Ask someone about a memorable experience",
+        "Practice a story aloud",
+        "Share a story that teaches something"
+      ]
     },
     {
       "id": "craftsmanship",
       "name": "Craftsmanship",
       "description": "Caring deeply about how things are made",
-      "category": "Creativity & Expression"
+      "category": "Creativity & Expression",
+      "actions": [
+        "Refine one detail of something you made",
+        "Check the finish on a small project",
+        "Practice a precise technique",
+        "Care for your tools",
+        "Study how a well-made object is assembled",
+        "Fix a minor imperfection",
+        "Measure carefully before making a cut",
+        "Choose materials thoughtfully",
+        "Complete a small task with attention to quality",
+        "Ask for feedback on the details"
+      ]
     },
     {
       "id": "expressiveness",
       "name": "Expressiveness",
       "description": "Giving voice to feelings and ideas",
-      "category": "Creativity & Expression"
+      "category": "Creativity & Expression",
+      "actions": [
+        "Name a feeling in your own words",
+        "Draw what your mood feels like",
+        "Write an honest paragraph",
+        "Share a meaningful song with someone",
+        "Use movement to express an emotion",
+        "Tell someone what excites you",
+        "Speak an idea aloud rather than hiding it",
+        "Create a simple mood collage",
+        "Practice expressing a preference clearly",
+        "Choose a photo that captures your perspective"
+      ]
     },
     {
       "id": "health",
       "name": "Health",
       "description": "Caring for your physical wellbeing",
-      "category": "Wellbeing & Inner Life"
+      "category": "Wellbeing & Inner Life",
+      "actions": [
+        "Drink a glass of water",
+        "Take a short comfortable walk",
+        "Prepare a balanced snack",
+        "Stretch gently for a few minutes",
+        "Schedule an overdue routine checkup",
+        "Take a break from prolonged sitting",
+        "Choose a satisfying nourishing meal",
+        "Set up a calmer bedtime routine",
+        "Spend a few minutes outdoors",
+        "Notice what your body needs right now"
+      ]
     },
     {
       "id": "vitality",
       "name": "Vitality",
       "description": "Living with energy and aliveness",
-      "category": "Wellbeing & Inner Life"
+      "category": "Wellbeing & Inner Life",
+      "actions": [
+        "Step outside for fresh air",
+        "Move to a song you enjoy",
+        "Take an energizing short walk",
+        "Do a few comfortable stretches",
+        "Open the curtains to daylight",
+        "Choose an activity that feels energizing",
+        "Pause for water when thirsty",
+        "Take a screen break and move",
+        "Spend five minutes in active play",
+        "Notice what increases your sense of aliveness"
+      ]
     },
     {
       "id": "balance",
       "name": "Balance",
       "description": "Making room for life's competing needs",
-      "category": "Wellbeing & Inner Life"
+      "category": "Wellbeing & Inner Life",
+      "actions": [
+        "Reserve time for rest between tasks",
+        "Say no to one unnecessary commitment",
+        "Make room for a neglected life area",
+        "Take a break after focused work",
+        "Plan both effort and enjoyment",
+        "Review your schedule for overload",
+        "Give a relationship some uninterrupted time",
+        "Close work at a chosen stopping point",
+        "Choose a manageable priority for today",
+        "Adjust a plan that has become too demanding"
+      ]
     },
     {
       "id": "peace",
       "name": "Peace",
       "description": "Cultivating inner and interpersonal calm",
-      "category": "Wellbeing & Inner Life"
+      "category": "Wellbeing & Inner Life",
+      "actions": [
+        "Step away from an unnecessary argument",
+        "Create a quiet space for five minutes",
+        "Speak calmly during a disagreement",
+        "Release one problem you cannot solve now",
+        "Listen to gentle sounds without multitasking",
+        "Pause before sending a heated message",
+        "Take a slow walk somewhere peaceful",
+        "Choose a respectful resolution to a small conflict",
+        "Limit exposure to an upsetting news loop",
+        "Notice a moment of stillness"
+      ]
     },
     {
       "id": "calm",
       "name": "Calm",
       "description": "Meeting moments with steadiness",
-      "category": "Wellbeing & Inner Life"
+      "category": "Wellbeing & Inner Life",
+      "actions": [
+        "Take five unhurried breaths",
+        "Relax your shoulders and jaw",
+        "Lower the volume of background noise",
+        "Pause before responding to a stressful message",
+        "Focus on one simple task",
+        "Spend two minutes away from a screen",
+        "Notice your feet on the ground",
+        "Slow your pace during a routine activity",
+        "Sit quietly with a warm drink",
+        "Choose a gentler next step"
+      ]
     },
     {
       "id": "mindfulness",
       "name": "Mindfulness",
       "description": "Paying attention to the present moment",
-      "category": "Wellbeing & Inner Life"
+      "category": "Wellbeing & Inner Life",
+      "actions": [
+        "Notice three sounds around you",
+        "Feel your feet touching the floor",
+        "Eat a bite without looking at a screen",
+        "Observe your breathing for one minute",
+        "Notice a thought without following it",
+        "Pay attention while washing your hands",
+        "Look closely at an everyday object",
+        "Notice the sensations of a short walk",
+        "Return attention to a conversation",
+        "Pause to observe what you feel right now"
+      ]
     },
     {
       "id": "self-compassion",
       "name": "Self-compassion",
       "description": "Treating yourself kindly through difficulty",
-      "category": "Wellbeing & Inner Life"
+      "category": "Wellbeing & Inner Life",
+      "actions": [
+        "Talk to yourself as you would to a friend",
+        "Acknowledge that a task is hard",
+        "Take a short rest without self-criticism",
+        "Replace one harsh label with a fair description",
+        "Offer yourself patience after a mistake",
+        "Notice effort rather than only results",
+        "Write a supportive sentence to yourself",
+        "Give yourself permission to ask for help",
+        "Choose a manageable expectation",
+        "Recognize a small thing you handled well"
+      ]
     },
     {
       "id": "acceptance",
       "name": "Acceptance",
       "description": "Making room for what you cannot control",
-      "category": "Wellbeing & Inner Life"
+      "category": "Wellbeing & Inner Life",
+      "actions": [
+        "Name something you cannot change today",
+        "Notice a feeling without fighting it",
+        "Pause before trying to control someone else",
+        "Allow a minor inconvenience to pass",
+        "Focus on a next step within your control",
+        "Write down a reality you are resisting",
+        "Let an imperfect task be good enough",
+        "Acknowledge uncertainty without rushing to fix it",
+        "Make space for a difficult emotion",
+        "Practice saying \"This is what is happening now\""
+      ]
     },
     {
       "id": "resilience",
       "name": "Resilience",
       "description": "Returning to what matters after setbacks",
-      "category": "Wellbeing & Inner Life"
+      "category": "Wellbeing & Inner Life",
+      "actions": [
+        "Take one small step after a setback",
+        "Recall a difficulty you overcame",
+        "Ask for support with a challenge",
+        "Adjust a plan that did not work",
+        "Take a restorative break then try again",
+        "Identify one lesson from a mistake",
+        "Notice a strength you used in adversity",
+        "Set a manageable next goal",
+        "Accept that progress can be uneven",
+        "Celebrate returning to something important"
+      ]
     },
     {
       "id": "rest",
       "name": "Rest",
       "description": "Giving yourself genuine time to recover",
-      "category": "Wellbeing & Inner Life"
+      "category": "Wellbeing & Inner Life",
+      "actions": [
+        "Pause for a few quiet minutes",
+        "Put your phone aside during a break",
+        "Sit comfortably without multitasking",
+        "Take a brief screen-free break",
+        "Protect a realistic bedtime",
+        "Decline an optional demand when depleted",
+        "Listen to restful music",
+        "Spend a few minutes doing nothing",
+        "Choose an easier pace for one task",
+        "Prepare a calm place to relax"
+      ]
     },
     {
       "id": "joy",
       "name": "Joy",
       "description": "Welcoming delight and gladness",
-      "category": "Joy & Appreciation"
+      "category": "Joy & Appreciation",
+      "actions": [
+        "Do something that makes you smile",
+        "Listen to a favorite uplifting song",
+        "Share a happy memory with someone",
+        "Notice a small pleasant moment",
+        "Make time for a hobby you enjoy",
+        "Watch something that makes you laugh",
+        "Celebrate a small achievement",
+        "Step outside to enjoy nice weather",
+        "Choose a playful activity",
+        "Tell someone about a moment of delight"
+      ]
     },
     {
       "id": "fun",
       "name": "Fun",
       "description": "Making space for enjoyable experiences",
-      "category": "Joy & Appreciation"
+      "category": "Joy & Appreciation",
+      "actions": [
+        "Play a quick game with a friend",
+        "Try a new lighthearted activity",
+        "Share a joke with someone",
+        "Choose a playful challenge",
+        "Put on music and dance",
+        "Make an ordinary chore into a game",
+        "Visit somewhere enjoyable nearby",
+        "Spend ten minutes on a fun hobby",
+        "Invent a silly competition",
+        "Try a new game or puzzle"
+      ]
     },
     {
       "id": "gratitude",
       "name": "Gratitude",
       "description": "Appreciating what is good and meaningful",
-      "category": "Joy & Appreciation"
+      "category": "Joy & Appreciation",
+      "actions": [
+        "Write down three things you appreciate",
+        "Thank someone for a specific kindness",
+        "Recall a moment that went well",
+        "Notice a comfort you often overlook",
+        "Send a grateful message",
+        "Appreciate a simple meal",
+        "Name one person who makes life better",
+        "Reflect on a skill you are glad to have",
+        "Notice something beautiful nearby",
+        "Describe why a small good moment mattered"
+      ]
     },
     {
       "id": "appreciation",
       "name": "Appreciation",
       "description": "Noticing and valuing everyday gifts",
-      "category": "Joy & Appreciation"
+      "category": "Joy & Appreciation",
+      "actions": [
+        "Notice thoughtful work someone did",
+        "Compliment a useful everyday design",
+        "Pause to enjoy a familiar view",
+        "Acknowledge a small act of care",
+        "Thank a colleague for their effort",
+        "Look closely at an object you enjoy",
+        "Appreciate a routine that helps you",
+        "Recognize someone's quiet contribution",
+        "Take time to enjoy music you love",
+        "Name one ordinary thing that makes life easier"
+      ]
     },
     {
       "id": "humor",
       "name": "Humor",
       "description": "Finding and sharing what is funny",
-      "category": "Joy & Appreciation"
+      "category": "Joy & Appreciation",
+      "actions": [
+        "Share a joke that is kind",
+        "Watch a short comedy clip",
+        "Notice the funny side of a harmless mistake",
+        "Send a playful message to a friend",
+        "Tell an amusing story",
+        "Read a funny comic",
+        "Laugh at a silly memory",
+        "Make up a lighthearted pun",
+        "Listen to someone else's funny story",
+        "Choose laughter over irritation when appropriate"
+      ]
     },
     {
       "id": "celebration",
       "name": "Celebration",
       "description": "Marking moments and people that matter",
-      "category": "Joy & Appreciation"
+      "category": "Joy & Appreciation",
+      "actions": [
+        "Acknowledge a small success aloud",
+        "Send congratulations to a friend",
+        "Mark a completed project with a treat",
+        "Share good news with someone",
+        "Create a mini ritual for a milestone",
+        "Thank everyone who helped with a success",
+        "Take a photo of a meaningful achievement",
+        "Write down something worth celebrating",
+        "Invite someone to celebrate together",
+        "Recognize progress before moving on"
+      ]
     },
     {
       "id": "savoring",
       "name": "Savoring",
       "description": "Fully enjoying worthwhile moments",
-      "category": "Joy & Appreciation"
+      "category": "Joy & Appreciation",
+      "actions": [
+        "Enjoy a warm drink without rushing",
+        "Notice the flavors of a favorite food",
+        "Pause during a pleasant conversation",
+        "Listen fully to a song you love",
+        "Stay with a good moment for a few breaths",
+        "Notice the texture of something comforting",
+        "Enjoy the warmth of sunlight",
+        "Recall a happy moment in detail",
+        "Slow down during a beautiful walk",
+        "Appreciate a view for one full minute"
+      ]
     },
     {
       "id": "lightheartedness",
       "name": "Lightheartedness",
       "description": "Holding life with some ease and levity",
-      "category": "Joy & Appreciation"
+      "category": "Joy & Appreciation",
+      "actions": [
+        "Smile at a small absurdity",
+        "Let go of one harmless imperfection",
+        "Make a gentle joke about a minor mishap",
+        "Choose a playful response when appropriate",
+        "Avoid turning a small issue into a crisis",
+        "Enjoy a silly activity without judging it",
+        "Share a light moment with a friend",
+        "Laugh at an unexpected inconvenience",
+        "Allow yourself to be a beginner",
+        "Approach a routine task with curiosity"
+      ]
     },
     {
       "id": "awe",
       "name": "Awe",
       "description": "Feeling moved by something larger than yourself",
-      "category": "Joy & Appreciation"
+      "category": "Joy & Appreciation",
+      "actions": [
+        "Look up at the night sky",
+        "Read about a vast natural phenomenon",
+        "Listen to an inspiring piece of music",
+        "Visit a place with a striking view",
+        "Observe an intricate natural pattern",
+        "View images from space",
+        "Notice a moment of extraordinary skill",
+        "Spend time among large trees",
+        "Read about an astonishing discovery",
+        "Pause to appreciate the scale of the world"
+      ]
     },
     {
       "id": "enthusiasm",
       "name": "Enthusiasm",
       "description": "Bringing wholehearted energy to life",
-      "category": "Joy & Appreciation"
+      "category": "Joy & Appreciation",
+      "actions": [
+        "Tell someone what excites you",
+        "Start a task with a positive intention",
+        "Spend ten minutes on a passion",
+        "Share an interesting idea energetically",
+        "Choose a project you feel drawn to",
+        "Make a playlist that lifts your energy",
+        "Ask someone about their excitement",
+        "Take the first step on an inspiring idea",
+        "Notice what makes you eager to begin",
+        "Bring engaged attention to a group activity"
+      ]
     },
     {
       "id": "purpose",
       "name": "Purpose",
       "description": "Living in a direction that feels meaningful",
-      "category": "Purpose & Commitment"
+      "category": "Purpose & Commitment",
+      "actions": [
+        "Write why a goal matters to you",
+        "Choose one action aligned with your principles",
+        "Revisit a commitment you care about",
+        "Identify who benefits from your efforts",
+        "Make time for a meaningful project",
+        "Decline a distraction from a chosen priority",
+        "Reflect on the direction you want to move",
+        "Ask what you want your actions to stand for",
+        "Connect a routine task to a larger aim",
+        "Take one step toward a long-term purpose"
+      ]
     },
     {
       "id": "meaning",
       "name": "Meaning",
       "description": "Seeking significance in your experiences",
-      "category": "Purpose & Commitment"
+      "category": "Purpose & Commitment",
+      "actions": [
+        "Reflect on a moment that mattered deeply",
+        "Write about a person who shaped you",
+        "Ask why a favorite activity matters",
+        "Share a meaningful story with someone",
+        "Notice how a small task helps others",
+        "Revisit a personal value",
+        "Read something that makes you think",
+        "Identify a cause you feel connected to",
+        "Describe a memory you want to keep",
+        "Spend time on something you find significant"
+      ]
     },
     {
       "id": "dedication",
       "name": "Dedication",
       "description": "Giving sustained effort to what matters",
-      "category": "Purpose & Commitment"
+      "category": "Purpose & Commitment",
+      "actions": [
+        "Set aside time for a chosen project",
+        "Complete a small part of a long task",
+        "Review why a commitment matters",
+        "Show up for a practice session",
+        "Prepare materials for your next effort",
+        "Return to work after a short break",
+        "Remove one distraction from focused time",
+        "Track a meaningful milestone",
+        "Ask how to improve your approach",
+        "Follow through on a task you care about"
+      ]
     },
     {
       "id": "perseverance",
       "name": "Perseverance",
       "description": "Continuing despite difficulty",
-      "category": "Purpose & Commitment"
+      "category": "Purpose & Commitment",
+      "actions": [
+        "Retry a task that did not work",
+        "Spend five more minutes on a challenge",
+        "Break a hard task into a smaller step",
+        "Remind yourself why the effort matters",
+        "Ask for help instead of quitting immediately",
+        "Try a different approach after failure",
+        "Record a lesson from an obstacle",
+        "Finish a manageable unfinished task",
+        "Practice patience with slow progress",
+        "Return to a goal after a setback"
+      ]
     },
     {
       "id": "discipline",
       "name": "Discipline",
       "description": "Practicing chosen commitments consistently",
-      "category": "Purpose & Commitment"
+      "category": "Purpose & Commitment",
+      "actions": [
+        "Start a chosen task at the planned time",
+        "Put away one distraction before working",
+        "Practice a skill for ten focused minutes",
+        "Follow a realistic routine today",
+        "Prepare your workspace",
+        "Complete a small commitment to yourself",
+        "Set a clear stopping point for a task",
+        "Choose a priority before opening social media",
+        "Use a timer for focused practice",
+        "Review what helped you follow through"
+      ]
     },
     {
       "id": "excellence",
       "name": "Excellence",
       "description": "Doing meaningful work with care and quality",
-      "category": "Purpose & Commitment"
+      "category": "Purpose & Commitment",
+      "actions": [
+        "Review a piece of work for quality",
+        "Improve one important detail",
+        "Ask what good work looks like",
+        "Check accuracy before submitting something",
+        "Study an example of strong craftsmanship",
+        "Request constructive feedback",
+        "Remove a flaw from a simple process",
+        "Take care with a small task",
+        "Refine something rather than rushing it",
+        "Choose a standard worth meeting"
+      ]
     },
     {
       "id": "diligence",
       "name": "Diligence",
       "description": "Applying steady and attentive effort",
-      "category": "Purpose & Commitment"
+      "category": "Purpose & Commitment",
+      "actions": [
+        "Check a task for overlooked details",
+        "Work steadily for a focused interval",
+        "Follow a checklist carefully",
+        "Complete a small tedious task",
+        "Verify information before using it",
+        "Organize materials for the next step",
+        "Finish what you started when practical",
+        "Review instructions before acting",
+        "Take notes during a complex task",
+        "Double-check an important piece of work"
+      ]
     },
     {
       "id": "initiative",
       "name": "Initiative",
       "description": "Beginning useful action without being pushed",
-      "category": "Purpose & Commitment"
+      "category": "Purpose & Commitment",
+      "actions": [
+        "Offer a solution before being asked",
+        "Start a useful task you have postponed",
+        "Suggest an improvement to a process",
+        "Reach out with a constructive idea",
+        "Make the first move on a shared project",
+        "Organize materials for an upcoming task",
+        "Volunteer to handle a manageable need",
+        "Ask what problem you can help solve",
+        "Create a first draft of an idea",
+        "Take a small step without waiting for perfect conditions"
+      ]
     },
     {
       "id": "stewardship",
       "name": "Stewardship",
       "description": "Taking thoughtful care of what is entrusted",
-      "category": "Purpose & Commitment"
+      "category": "Purpose & Commitment",
+      "actions": [
+        "Care for a tool you frequently use",
+        "Maintain a shared resource",
+        "Repair rather than replace when sensible",
+        "Keep a borrowed item in good condition",
+        "Use supplies thoughtfully",
+        "Leave a workspace ready for others",
+        "Check on something entrusted to you",
+        "Reduce waste in a routine task",
+        "Document useful knowledge for future users",
+        "Make a plan to maintain an important asset"
+      ]
     },
     {
       "id": "consistency",
       "name": "Consistency",
       "description": "Returning to your principles over time",
-      "category": "Purpose & Commitment"
+      "category": "Purpose & Commitment",
+      "actions": [
+        "Repeat a small chosen habit today",
+        "Show up for a regular commitment",
+        "Set a realistic routine you can sustain",
+        "Return to a value after getting distracted",
+        "Review a promise you want to keep",
+        "Practice a skill at a usual time",
+        "Make one choice aligned with your principles",
+        "Track a repeated action simply",
+        "Prepare a cue for your next practice",
+        "Choose steady effort over a dramatic sprint"
+      ]
     },
     {
       "id": "nature",
       "name": "Nature",
       "description": "Valuing connection with the natural world",
-      "category": "Nature & World"
+      "category": "Nature & World",
+      "actions": [
+        "Take a short walk among trees",
+        "Notice a bird or insect nearby",
+        "Spend a few minutes in a park",
+        "Observe the shape of a leaf",
+        "Listen to natural sounds",
+        "Learn the name of a local plant",
+        "Watch the clouds for a moment",
+        "Care for a houseplant",
+        "Visit a nearby green space",
+        "Appreciate a natural change in the season"
+      ]
     },
     {
       "id": "sustainability",
       "name": "Sustainability",
       "description": "Living with care for future generations",
-      "category": "Nature & World"
+      "category": "Nature & World",
+      "actions": [
+        "Use a reusable bottle",
+        "Choose to repair a useful item",
+        "Avoid one unnecessary purchase",
+        "Plan a meal that uses leftovers",
+        "Reduce energy use in an empty room",
+        "Choose a lower-waste option when practical",
+        "Walk for a short local errand if feasible",
+        "Learn how to recycle one material correctly",
+        "Share something you no longer need",
+        "Choose a durable item over a disposable one"
+      ]
     },
     {
       "id": "conservation",
       "name": "Conservation",
       "description": "Protecting living places and species",
-      "category": "Nature & World"
+      "category": "Nature & World",
+      "actions": [
+        "Learn about a local threatened species",
+        "Support a trusted conservation effort",
+        "Stay on marked trails in sensitive habitats",
+        "Pick up litter safely in a natural area",
+        "Avoid disturbing nesting wildlife",
+        "Share reliable information about habitat protection",
+        "Choose a wildlife-friendly gardening step",
+        "Visit a protected nature reserve responsibly",
+        "Reduce waste that could harm wildlife",
+        "Join a local habitat-care activity"
+      ]
     },
     {
       "id": "environmental-care",
       "name": "Environmental Care",
       "description": "Acting responsibly toward ecosystems",
-      "category": "Nature & World"
+      "category": "Nature & World",
+      "actions": [
+        "Sort a recyclable item correctly",
+        "Use less water during a routine task",
+        "Avoid littering in a public space",
+        "Pick up one piece of litter safely",
+        "Choose a less wasteful household option",
+        "Turn off unused lights",
+        "Use a reusable shopping bag",
+        "Dispose of batteries responsibly",
+        "Learn about a local environmental issue",
+        "Make one small eco-friendly change at home"
+      ]
     },
     {
       "id": "simplicity",
       "name": "Simplicity",
       "description": "Choosing enough over unnecessary excess",
-      "category": "Nature & World"
+      "category": "Nature & World",
+      "actions": [
+        "Clear one unnecessary item from a surface",
+        "Choose one priority instead of many",
+        "Decline a nonessential purchase",
+        "Simplify a complicated routine",
+        "Reduce the number of open browser tabs",
+        "Keep a small space uncluttered",
+        "Use what you already own",
+        "Remove a redundant step from a process",
+        "Choose a simple meal you enjoy",
+        "Spend a few minutes without distractions"
+      ]
     },
     {
       "id": "harmony",
       "name": "Harmony",
       "description": "Seeking balanced coexistence with others and nature",
-      "category": "Nature & World"
+      "category": "Nature & World",
+      "actions": [
+        "Listen for common ground in a disagreement",
+        "Make space for another person's needs",
+        "Choose a calmer approach to a conflict",
+        "Adjust a shared plan fairly",
+        "Take a peaceful walk in nature",
+        "Appreciate how parts of a system work together",
+        "Avoid unnecessary rivalry",
+        "Ask how two competing needs can coexist",
+        "Bring order to a shared space",
+        "Practice a respectful compromise"
+      ]
     },
     {
       "id": "reverence-for-life",
       "name": "Reverence for Life",
       "description": "Treating living things as worthy of care",
-      "category": "Nature & World"
+      "category": "Nature & World",
+      "actions": [
+        "Treat a living creature gently",
+        "Avoid harming a small animal unnecessarily",
+        "Care for a plant",
+        "Observe wildlife without disturbing it",
+        "Learn about an animal's needs",
+        "Choose a humane response to a pest",
+        "Offer water to a thirsty pet",
+        "Support an animal welfare effort",
+        "Handle living things with care",
+        "Reflect on the value of a living ecosystem"
+      ]
     },
     {
       "id": "interdependence",
       "name": "Interdependence",
       "description": "Recognizing how lives affect each other",
-      "category": "Nature & World"
+      "category": "Nature & World",
+      "actions": [
+        "Thank someone whose work helps you",
+        "Notice how a routine relies on others",
+        "Share a resource with someone",
+        "Ask how your actions affect teammates",
+        "Help maintain a shared space",
+        "Learn where an everyday product comes from",
+        "Support a local service you rely on",
+        "Acknowledge unseen contributions",
+        "Offer help when a shared task is under strain",
+        "Reflect on one way you depend on nature"
+      ]
     },
     {
       "id": "outdoor-living",
       "name": "Outdoor Living",
       "description": "Making room for time in natural spaces",
-      "category": "Nature & World"
+      "category": "Nature & World",
+      "actions": [
+        "Eat a meal outdoors when practical",
+        "Take a short walk outside",
+        "Spend time in a nearby park",
+        "Read a few pages on a bench",
+        "Try a simple outdoor stretch",
+        "Visit a local trail",
+        "Observe the weather before a walk",
+        "Take a break in natural daylight",
+        "Invite someone for an outdoor activity",
+        "Plan a small weekend outing in nature"
+      ]
     },
     {
       "id": "care-for-animals",
       "name": "Care for Animals",
       "description": "Treating animals with concern and respect",
-      "category": "Nature & World"
+      "category": "Nature & World",
+      "actions": [
+        "Provide fresh water for a pet",
+        "Learn about an animal's proper care",
+        "Give a pet some attentive playtime",
+        "Support a reputable animal shelter",
+        "Choose a wildlife-friendly action at home",
+        "Observe an animal without disturbing it",
+        "Report an injured animal to an appropriate service",
+        "Respect an animal's boundaries",
+        "Help clean a pet's living area",
+        "Share reliable animal welfare information"
+      ]
     },
     {
       "id": "hope",
       "name": "Hope",
       "description": "Staying open to good possibilities",
-      "category": "Spirituality & Perspective"
+      "category": "Spirituality & Perspective",
+      "actions": [
+        "Write one realistic possibility you look forward to",
+        "Notice a small sign of progress",
+        "Reach out to someone who encourages you",
+        "Take one step toward a positive outcome",
+        "Recall a challenge that improved with time",
+        "List one thing that can still change",
+        "Share an encouraging thought with someone",
+        "Look for a constructive option in a setback",
+        "Read about a hopeful real-world development",
+        "Make a manageable plan for tomorrow"
+      ]
     },
     {
       "id": "faith",
       "name": "Faith",
       "description": "Living from deeply held trust or belief",
-      "category": "Spirituality & Perspective"
+      "category": "Spirituality & Perspective",
+      "actions": [
+        "Make time for a personal faith practice",
+        "Reflect on a belief that guides you",
+        "Read a meaningful passage from your tradition",
+        "Talk with someone you trust about belief",
+        "Attend a faith community gathering if desired",
+        "Practice a teaching you hold important",
+        "Express gratitude through a personal ritual",
+        "Offer support shaped by your convictions",
+        "Sit quietly in reflection or prayer",
+        "Consider how your beliefs inform a decision"
+      ]
     },
     {
       "id": "spirituality",
       "name": "Spirituality",
       "description": "Exploring connection with deeper meaning",
-      "category": "Spirituality & Perspective"
+      "category": "Spirituality & Perspective",
+      "actions": [
+        "Spend a few minutes in quiet reflection",
+        "Explore a spiritual text or teaching",
+        "Notice a sense of connection with nature",
+        "Practice a personally meaningful ritual",
+        "Reflect on what gives life deeper meaning",
+        "Join a contemplative gathering if desired",
+        "Write about a moment of transcendence",
+        "Listen to music that evokes spiritual reflection",
+        "Explore a spiritual tradition respectfully",
+        "Consider what you feel connected to beyond yourself"
+      ]
     },
     {
       "id": "transcendence",
       "name": "Transcendence",
       "description": "Looking beyond immediate self-interest",
-      "category": "Spirituality & Perspective"
+      "category": "Spirituality & Perspective",
+      "actions": [
+        "Do something helpful without seeking credit",
+        "Spend time considering a cause beyond yourself",
+        "Notice your place in a wider community",
+        "Reflect on future generations",
+        "Observe a vast natural scene",
+        "Support an effort that benefits strangers",
+        "Read about a life very different from yours",
+        "Step away from a self-focused worry briefly",
+        "Ask how an action serves a larger purpose",
+        "Practice gratitude for what connects people"
+      ]
     },
     {
       "id": "contemplation",
       "name": "Contemplation",
       "description": "Making space for thoughtful stillness",
-      "category": "Spirituality & Perspective"
+      "category": "Spirituality & Perspective",
+      "actions": [
+        "Sit quietly with one question",
+        "Read a short thoughtful passage",
+        "Spend five minutes observing your thoughts",
+        "Reflect on an experience without distractions",
+        "Write about something you do not yet understand",
+        "Look out a window in stillness",
+        "Take a slow reflective walk",
+        "Consider a moral question carefully",
+        "Observe the world without needing to act",
+        "Return to a meaningful idea after a pause"
+      ]
     },
     {
       "id": "inner-harmony",
       "name": "Inner Harmony",
       "description": "Seeking coherence among your values",
-      "category": "Spirituality & Perspective"
+      "category": "Spirituality & Perspective",
+      "actions": [
+        "Notice when two priorities pull you apart",
+        "Write down a choice that fits your values",
+        "Adjust a commitment that feels misaligned",
+        "Make space for competing needs",
+        "Reflect on the reason behind a difficult feeling",
+        "Take a quiet moment before deciding",
+        "Identify one internal contradiction kindly",
+        "Choose a response consistent with your principles",
+        "Review which parts of life feel in balance",
+        "Make one small change toward coherence"
+      ]
     },
     {
       "id": "sacredness",
       "name": "Sacredness",
       "description": "Treating certain moments or things as deeply significant",
-      "category": "Spirituality & Perspective"
+      "category": "Spirituality & Perspective",
+      "actions": [
+        "Treat a meaningful object with care",
+        "Spend quiet time in a personally significant place",
+        "Mark an important moment with intention",
+        "Reflect on a deeply meaningful tradition",
+        "Create a small personal ritual",
+        "Show respect in a place others hold sacred",
+        "Write about something you hold precious",
+        "Observe a moment of silence",
+        "Honor a meaningful memory",
+        "Approach an important occasion with care"
+      ]
     },
     {
       "id": "interconnectedness",
       "name": "Interconnectedness",
       "description": "Recognizing connection across living things",
-      "category": "Spirituality & Perspective"
+      "category": "Spirituality & Perspective",
+      "actions": [
+        "Notice how nature supports daily life",
+        "Reflect on the people behind a meal",
+        "Spend time observing an ecosystem",
+        "Help a stranger in a small way",
+        "Learn how a local community resource works",
+        "Acknowledge how one decision affects others",
+        "Support a project that connects people",
+        "Discuss a shared challenge with someone",
+        "Reflect on a connection across generations",
+        "Notice how your actions affect living things"
+      ]
     },
     {
       "id": "openness",
       "name": "Openness",
       "description": "Receiving life without rigid certainty",
-      "category": "Spirituality & Perspective"
+      "category": "Spirituality & Perspective",
+      "actions": [
+        "Try an unfamiliar experience safely",
+        "Listen without needing immediate certainty",
+        "Invite a new perspective on a problem",
+        "Allow plans to change when appropriate",
+        "Say \"I don't know yet\" honestly",
+        "Read about an idea outside your interests",
+        "Notice when you dismiss something too quickly",
+        "Ask an open-ended question",
+        "Consider a new suggestion before rejecting it",
+        "Make space for an unexpected opportunity"
+      ]
     },
     {
       "id": "tradition",
       "name": "Tradition",
       "description": "Keeping meaningful practices alive",
-      "category": "Spirituality & Perspective"
+      "category": "Spirituality & Perspective",
+      "actions": [
+        "Prepare a meaningful family recipe",
+        "Ask a relative about an old custom",
+        "Practice a ritual that matters to you",
+        "Share a family story with someone",
+        "Learn the origin of a cherished tradition",
+        "Mark a cultural occasion thoughtfully",
+        "Preserve a meaningful photo or document",
+        "Teach someone a custom you value",
+        "Visit a place linked to your heritage",
+        "Reflect on which traditions you want to carry forward"
+      ]
     }
   ]
 }
